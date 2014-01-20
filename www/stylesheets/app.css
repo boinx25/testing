@@ -1,0 +1,488 @@
+/* line 114, icons/*.png */
+.icons-sprite, .icons-correct, .icons-history, .icons-home, .icons-htmlicon, .icons-htmltag, .icons-login, .icons-next, .icons-prev, .icons-quiz, .icons-wrong, .header .nav #home, .header .nav #history, .header .nav #quiz, .header .nav #htmltags, .header .nav #usericon, .check, .cross {
+  background: url('../images/icons-sefbc48d4f6.png') no-repeat;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-correct {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-history {
+  background-position: -64px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-home {
+  background-position: -96px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-htmlicon {
+  background-position: -128px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-htmltag {
+  background-position: -150px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-login {
+  background-position: -182px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-next {
+  background-position: -214px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-prev {
+  background-position: -278px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-quiz {
+  background-position: -342px 0;
+}
+
+/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-wrong {
+  background-position: -374px 0;
+}
+
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 6, ../sass/app.scss */
+body {
+  background-color: deepskyblue;
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* line 11, ../sass/app.scss */
+.modal-content {
+  top: 30px;
+}
+
+/* line 15, ../sass/app.scss */
+.container {
+  width: 100%;
+  margin-top: 50px;
+}
+/* line 19, ../sass/app.scss */
+.container .con {
+  width: 100%;
+  margin: 0px auto;
+}
+/* line 23, ../sass/app.scss */
+.container .con .logo {
+  width: 212px;
+  margin: 30px auto;
+}
+
+/* line 30, ../sass/app.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 34, ../sass/app.scss */
+.header {
+  width: 100%;
+  height: 45px;
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+/* line 44, ../sass/app.scss */
+.header .nav {
+  width: 390px;
+  top: 5px;
+  margin: auto;
+  position: relative;
+  font-size: 10px;
+}
+/* line 51, ../sass/app.scss */
+.header .nav #home {
+  background-position: -96px 0;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 20px;
+  opacity: .25;
+}
+/* line 61, ../sass/app.scss */
+.header .nav #history {
+  background-position: -64px 0;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  /*margin-left: 20px;*/
+  margin-right: 20px;
+  opacity: .25;
+}
+/* line 71, ../sass/app.scss */
+.header .nav #quiz {
+  background-position: -342px 0;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  /*margin-left: 20px;*/
+  margin-right: 20px;
+  opacity: .25;
+}
+/* line 81, ../sass/app.scss */
+.header .nav #htmltags {
+  background-position: -150px 0;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  /*margin-left: 20px;*/
+  margin-right: 20px;
+  opacity: .25;
+}
+/* line 91, ../sass/app.scss */
+.header .nav #usericon {
+  background-position: -182px 0;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
+  opacity: .25;
+  top: 5px;
+}
+/* line 102, ../sass/app.scss */
+.header .nav #WelcomeM {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+}
+/* line 109, ../sass/app.scss */
+.header .nav #LogOut {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  left: -55px;
+}
+
+/* line 120, ../sass/app.scss */
+.content {
+  /*width:500px;*/
+  /*height:170px;*/
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 30px;
+}
+/* line 130, ../sass/app.scss */
+.content span {
+  color: #ff7f00;
+}
+
+/* line 135, ../sass/app.scss */
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+}
+/* line 142, ../sass/app.scss */
+.footer .f-con {
+  width: 450px;
+  margin: auto;
+  font-size: 15px;
+  top: 15px;
+  position: relative;
+}
+/* line 149, ../sass/app.scss */
+.footer .f-con span {
+  color: #ff7f00;
+}
+/* line 153, ../sass/app.scss */
+.footer .f-con a:link {
+  text-decoration: none;
+  color: #ff7f00;
+}
+/* line 159, ../sass/app.scss */
+.footer .f-con a:visited {
+  text-decoration: none;
+  color: #ff7f00;
+}
+
+/* line 166, ../sass/app.scss */
+.modal-body {
+  text-align: center;
+}
+
+/* line 1, ../sass/quiz-intro.scss */
+.container {
+  width: 100%;
+}
+/* line 4, ../sass/quiz-intro.scss */
+.container span {
+  color: #ff7f00;
+}
+/* line 7, ../sass/quiz-intro.scss */
+.container .mess {
+  padding: 10px;
+  /*width: 400px;*/
+  text-align: center;
+  border-radius: 10px;
+  /*text-align: left;*/
+  background-color: white;
+  /*margin: $quesmar;*/
+  /*line-height: 1.5em;*/
+}
+/* line 17, ../sass/quiz-intro.scss */
+.container .mess .btn {
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*body {
+	background-color: $bgcolor;
+	font-family: 'Varela Round', sans-serif;
+}*/
+/*.nav-pane {*/
+/*@include border-bottom-right-radius(10px);*/
+/*background-color:$black;*/
+/*color:$white;*/
+/*font-size: 15px;*/
+/*height: 210px;*/
+/*padding:20px;*/
+/*border-radius:10px;*/
+/*color:$white;*/
+/*top:40px;*/
+/*left:0px;*/
+/*position:fixed;*/
+/*display: none;*/
+/*div {*/
+/*margin-top:10px;*/
+/*margin-bottom:10px;*/
+/*}*/
+/*float:left;
+h3 {
+	text-align: center;
+}*/
+/*}*/
+/* line 30, ../sass/history.scss */
+.container .navbar {
+  /*width: 100%;
+  height: 45px;
+  background-color: $black;
+  margin-bottom:10px;*/
+  /*position: fixed;*/
+  left: 0px;
+  top: 45px;
+  /*z-index: 9999;*/
+  /*.con {*/
+  /*margin: 16px auto;*/
+  /*width: 700px;*/
+  /*word-spacing: 2em;*/
+  /*ul {
+  	li {
+  		color: white;
+  		display: inline-block;
+  	}
+  }*/
+  /*}*/
+  /*ul {
+  	li {
+  		color: white;
+  		display: inline-block;
+  	}
+  }*/
+}
+
+/* line 1, ../sass/quiz.scss */
+body {
+  background-color: deepskyblue;
+}
+
+/* line 6, ../sass/quiz.scss */
+.container {
+  width: 100%;
+}
+/* line 9, ../sass/quiz.scss */
+.container .question {
+  /*width:600px;*/
+  /*height:50px;*/
+  margin: 50px auto;
+  text-align: center;
+  border: 1px solid #ff7f00;
+  border-radius: 10px;
+  background-color: white;
+  padding: 25px;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+/* line 21, ../sass/quiz.scss */
+.container #option-1 {
+  /*width:400px;*/
+  /*height:50px;*/
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ff7f00;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+  position: relative;
+}
+/* line 34, ../sass/quiz.scss */
+.container #option-2 {
+  /*width:400px;*/
+  /*height:50px;*/
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ff7f00;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+/* line 47, ../sass/quiz.scss */
+.container #option-3 {
+  /*width:400px;*/
+  /*height:50px;*/
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ff7f00;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+
+/* line 61, ../sass/quiz.scss */
+.current {
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  color: #ff7f00;
+  margin: 10px auto;
+  background-color: white;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+
+/* line 2, ../sass/quiz-done.scss */
+.check {
+  background-position: 0 0;
+  height: 64px;
+  width: 64px;
+}
+
+/* line 8, ../sass/quiz-done.scss */
+.cross {
+  background-position: -374px 0;
+  height: 64px;
+  width: 64px;
+}
+
+/* line 17, ../sass/quiz-done.scss */
+.content h1 span {
+  color: #ff7f00;
+}
+/* line 23, ../sass/quiz-done.scss */
+.content .y .check {
+  display: inline-block;
+}
+/* line 27, ../sass/quiz-done.scss */
+.content .y .messONe {
+  display: inline-block;
+}
+/* line 33, ../sass/quiz-done.scss */
+.content .x .cross {
+  display: inline-block;
+}
+/* line 37, ../sass/quiz-done.scss */
+.content .x .messTwo {
+  display: inline-block;
+}

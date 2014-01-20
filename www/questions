@@ -1,0 +1,66 @@
+//module 1
+
+1. All other elements of HTML or XHTML must be a descendant of this element. What is this element? answer: <html></html>
+
+2. It represents the content of an HTML document. All contents should be placed inside this tag. What is this element? answer: <body></body>
+
+3. There are two ways to write CSS - Inline or external.If you'll use the "inline" method, your CSS will be written inside of what tag? answer: <style> </style>
+
+4. There are two ways to write CSS - Inline or external.If you'll use the "external" method, you'll have to use what tag? answer: <link>
+
+5. It is use to define the title of the document. This tag only accepts text and any tags inside this tag will not be interpreted. answer: <title></title>
+
+6. <link> tags and <title></title> are usually placed inside this tag. It represent the collection of metadata about the document. What is this tag? answer: <head></head>
+
+7. It defines either an external or an internal script (JavaScript). What tag is this? answer: <script></script>
+
+8. HTML stands for? answer: Hypertext Markup Language
+
+9. He's the inventor of HTML. Who is he? answer: Tim Berners-Lee
+
+10. They develop protocols, guidlines, and standards for webdesign. This group is currently lead by the man who created HTML. answer: W3C
+
+//module 2
+
+1. The physics laboratory where Tim Berners-Lee is working when he came up with the concept of HTML. answer: CERN
+
+2. He introduced HTML3.0. Who is he? answer: Dave Raggett
+
+3. What is the codename given to HTML3.2? answer: WILBUR
+
+4. "Cougar" was the codename given to what version of HTML? aswer: HTML4.0
+
+5. It was the final revision of HTML and it is the current version being used today. What version of HTML is this?
+asnwer: HTML4.01
+
+6. HTML2.0 is also called RFC _ _ _ _. Give the missing four numbers:  answer: 1866
+
+7. They are the one responsible in developing HTML5. What is the name of their group? answer: WHATWG
+
+8. It is the standard of webdesign until 1997. Also called as RFC 1866. What version is this? answer: HTML2.0
+
+9. It was published late 1991 and was a document called "HTML tags". What version of HTML is this? answer: HTML1.0
+
+10. The hypertext system that Tim Berners-Lee develop before he worked for CERN. answer: ENQUIRE
+
+//module 3
+
+1. It is a generic container with no special meaning. Used to divide section in an HTML file. What tag is this? answer: <div> </div>
+
+2. There six header tags that you can use freely in HTML, what is the largest of the six? answer: <h1></h1>
+
+3. It defines a portion of an HTML that should be displayed as a paragraph. What tag is this? <p></p>
+
+4. This tag is use to display an image. What tag is this? answer: <img>
+
+5. Represents a form, cosisting of controls, that can be submitted to a server for processing. What is this? answer: <form></form>
+
+6. There are two list that you can use in HTML, unordered and ordered, if you're going to use ordered list, what tag are you going to type? answer: <ol></ol>
+
+7. Represents a list item of a list. What tag is this? answer: <li></li>
+
+8. This tag represents a hyperlink. What tag is this? answer: <a></a>
+
+9. Represents a typed data field allowing user to edit data. This tag is usually located within the <form></form> tags. What tag is this? answer: <input>
+
+10. Represents data with more than one dimension. Use to create a table. answer: <table></table>

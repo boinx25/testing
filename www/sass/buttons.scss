@@ -1,0 +1,8 @@
+@mixin btn-design {
+	height: 50px;
+	width:150px;
+	border-radius: 10px;
+	background-color:$orange;
+	color:$white;
+	font-size: 15px;
+}

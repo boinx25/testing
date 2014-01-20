@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>HTML 5 Tutorial</title>
+		<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" href="stylesheets/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="stylesheets/app.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo_title.jpg">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/quiz.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<!-- // <script type="text/javascript" src="scripts/jquery-mobile.js"></script> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	</head>
+	<body>
+		<div class="header navbar navbar-inverse navbar-fixed-top">
+				<div class = "col-xs-12">	
+					<div class="nav">
+						<div id="home" class="navButton"> </div>
+						<div id="htmltags" class="navButton"> </div>
+						<div id="history" class="navButton"> </div>
+						<div id="quiz" class="navButton"> </div>
+						<div id="usericon" class="navButton" href = "#register" role = "button" data-toggle = "modal"> </div>
+						<div id="WelcomeM"> </div>
+						<div id="LogOut"><a id="Out"></a></div>
+					</div>	<!-- end of nav div -->
+				</div> <!-- end of col-xs div -->	
+			</div> <!-- end of header div -->
+
+		<div class="container">
+		
+			<div class="con">
+				
+				<div class="logo"><img id = "logo" src="images/htmllogo.png" alt=""></div>	
+
+				<div class="content">
+					<p>Hello! Welcome to HTML5 Tutorials! Please use the navigation pane or the <span>ICONS</span> above to navigate through pages!</p>
+				</div> <!-- end of content div -->
+
+				<div class="clearfix"></div>
+			</div> <!-- end of con div -->
+
+		</div> <!-- end of container div -->
+		<div id = "register" class="modal fade" aria-hidden = "true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h3>Personal Info!</h3>
+					</div> <!-- end of modal-header div -->
+
+					<div class="modal-body">
+						<form action="">
+							<label for="">Nickname: </label><input id = "uname" type="text">
+						</form>
+					</div> <!-- end of modal-body div -->
+			
+
+					<div class="modal-footer">
+						<button id="regBut" class = "btn btn-success">Go!</button>
+
+					</div> <!-- end of modal-footer div -->
+				</div> <!-- end of modal-content div -->
+			</div> <!-- end of modal-dialog div -->
+		</div> <!-- end of register div -->
+	</body>
+</html>

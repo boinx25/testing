@@ -1,0 +1,173 @@
+@import 'compass';
+@import 'default';
+@import 'buttons';
+@import 'screen';
+
+body {
+	background-color: $bgcolor;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.modal-content {
+	top:30px;
+}
+
+.container {
+	width: 100%;
+	margin-top: 50px;
+
+	.con {
+		width:100%;
+		margin:$defmar;
+
+		.logo {
+			width:212px;
+			margin: $defmar2;
+		}
+	}
+}
+
+.clearfix {
+	clear:both;
+}
+
+.header {
+	width: 100%;
+	height: 45px;
+	background-color: $black;
+	color:$white;
+	margin-bottom:10px;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+
+	.nav {
+		width:390px;
+		top: 5px;
+		margin: auto;
+		position: relative;
+		font-size:10px;
+
+		#home {
+			@include icons-sprite(home);
+			height: $iconhw;
+			width: $iconhw;
+			display:inline-block;
+			margin-left: 50px;
+			margin-right: 20px;
+			opacity: .25;
+		}
+
+		#history {
+			@include icons-sprite(history);
+			height: $iconhw;
+			width:$iconhw;
+			display:inline-block;
+			/*margin-left: 20px;*/
+			margin-right: 20px;
+			opacity: .25;
+		}
+
+		#quiz {
+			@include icons-sprite(quiz);
+			height: $iconhw;
+			width: $iconhw;
+			display:inline-block;
+			/*margin-left: 20px;*/
+			margin-right: 20px;
+			opacity: .25;
+		}
+
+		#htmltags {
+			@include icons-sprite(htmltag);
+			height: $iconhw;
+			width: $iconhw;
+			display:inline-block;
+			/*margin-left: 20px;*/
+			margin-right: 20px;
+			opacity: .25;
+		}
+
+		#usericon {
+			@include icons-sprite(login);
+			height: $iconhw;
+			width: $iconhw;
+			display:inline-block;
+			/*margin-left: 20px;*/
+			/*margin-right: 20px;*/
+			opacity: .25;
+			top: 5px;
+		}
+
+		#WelcomeM{
+			display:inline-block;
+			position:relative;
+			top:-20px;
+
+		}
+
+		#LogOut{
+			display:inline-block;
+			position:relative;
+			top:-2px;
+			left:-55px;
+		}
+	}
+}
+
+
+
+.content {
+	/*width:500px;*/
+	/*height:170px;*/
+	padding:10px;
+	margin: $defmar2;
+	text-align:center;
+	background-color:$white;
+	border-radius: 10px;
+	font-size:30px;
+
+	span {
+		color: $orange;
+	}
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	background-color: $black;
+	color: $white;
+	margin-top: 30px;
+
+	.f-con {
+		width: 450px;
+		margin: auto;
+		font-size: 15px;
+		top: 15px;
+		position: relative;
+
+		span {
+			color: $orange;
+		}
+			a:link
+			{
+			text-decoration:none;
+			 color:$orange;
+			}
+
+			a:visited	
+			{
+			text-decoration:none;
+			color:$orange;
+			}
+	}
+}
+
+.modal-body {
+	text-align: center;
+}
+
+@import 'quiz-intro';
+@import 'history';
+@import 'quiz';
+@import 'quiz-done';
