@@ -2,14 +2,14 @@
 @import 'default';
 @import 'buttons';
 @import 'screen';
+@import 'quiz-intro';
+@import 'history';
+@import 'quiz';
+@import 'quiz-done';
 
 body {
 	background-color: $bgcolor;
 	font-family: 'Varela Round', sans-serif;
-}
-
-.modal-content {
-	top:30px;
 }
 
 .container {
@@ -125,11 +125,19 @@ body {
 	text-align:center;
 	background-color:$white;
 	border-radius: 10px;
-	font-size:30px;
+	/*font-size:30px;*/
 
 	span {
 		color: $orange;
 	}
+
+	p {
+		font-size: 25px;
+	}
+
+	/*p {
+		font-size: 12px;
+	}*/
 }
 
 .footer {
@@ -163,11 +171,9 @@ body {
 	}
 }
 
-.modal-body {
-	text-align: center;
+.modal-dialog {
+	margin-top: 100px;
+	.modal-content {
+		text-align: center;
+	}
 }
-
-@import 'quiz-intro';
-@import 'history';
-@import 'quiz';
-@import 'quiz-done';

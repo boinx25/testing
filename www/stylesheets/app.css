@@ -1,5 +1,5 @@
 /* line 114, icons/*.png */
-.icons-sprite, .icons-correct, .icons-history, .icons-home, .icons-htmlicon, .icons-htmltag, .icons-login, .icons-next, .icons-prev, .icons-quiz, .icons-wrong, .header .nav #home, .header .nav #history, .header .nav #quiz, .header .nav #htmltags, .header .nav #usericon, .check, .cross {
+.icons-sprite, .icons-correct, .icons-history, .icons-home, .icons-htmlicon, .icons-htmltag, .icons-login, .icons-next, .icons-prev, .icons-quiz, .icons-wrong, .check, .cross, .header .nav #home, .header .nav #history, .header .nav #quiz, .header .nav #htmltags, .header .nav #usericon {
   background: url('../images/icons-sefbc48d4f6.png') no-repeat;
 }
 
@@ -122,15 +122,214 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 6, ../sass/app.scss */
+/* line 1, ../sass/quiz-intro.scss */
+.container {
+  width: 100%;
+}
+/* line 4, ../sass/quiz-intro.scss */
+.container span {
+  color: #ff7f00;
+}
+/* line 7, ../sass/quiz-intro.scss */
+.container .mess {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  /*text-align: left;*/
+  background-color: white;
+  /*margin: $quesmar;*/
+  /*line-height: 1.5em;*/
+}
+/* line 17, ../sass/quiz-intro.scss */
+.container .mess .btn {
+  margin-bottom: 10px;
+  width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 3, ../sass/history.scss */
+.container .cont {
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+/* line 10, ../sass/history.scss */
+.container .cont span {
+  color: #ff7f00;
+}
+/* line 14, ../sass/history.scss */
+.container .cont h2 {
+  font-size: 20px;
+}
+/* line 18, ../sass/history.scss */
+.container .navbar {
+  /*width: 100%;
+  height: 45px;
+  background-color: $black;
+  margin-bottom:10px;*/
+  /*position: fixed;*/
+  left: 0px;
+  top: 45px;
+  /*z-index: 9999;*/
+  /*.con {*/
+  /*margin: 16px auto;*/
+  /*width: 700px;*/
+  /*word-spacing: 2em;*/
+  /*ul {
+  	li {
+  		color: white;
+  		display: inline-block;
+  	}
+  }*/
+  /*}*/
+  /*ul {
+  	li {
+  		color: white;
+  		display: inline-block;
+  	}
+  }*/
+}
+/* line 46, ../sass/history.scss */
+.container .evolution {
+  padding: 10px;
+  /*margin: $defmar2;*/
+  text-align: center;
+  background-color: #ff7f00;
+  border-radius: 10px;
+}
+/* line 53, ../sass/history.scss */
+.container .evolution h1 {
+  font-size: 30px;
+}
+/* line 55, ../sass/history.scss */
+.container .evolution h1 span {
+  color: deepskyblue;
+}
+
+/* line 1, ../sass/quiz.scss */
+body {
+  background-color: deepskyblue;
+}
+
+/* line 6, ../sass/quiz.scss */
+.container {
+  width: 100%;
+}
+/* line 9, ../sass/quiz.scss */
+.container .question {
+  /*width:600px;*/
+  /*height:50px;*/
+  margin: 50px auto;
+  text-align: center;
+  border: 1px solid #ff7f00;
+  border-radius: 10px;
+  background-color: white;
+  padding: 25px;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+/* line 21, ../sass/quiz.scss */
+.container #option-1 {
+  /*width:400px;*/
+  /*height:50px;*/
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ff7f00;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+  position: relative;
+}
+/* line 34, ../sass/quiz.scss */
+.container #option-2 {
+  /*width:400px;*/
+  /*height:50px;*/
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ff7f00;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+/* line 47, ../sass/quiz.scss */
+.container #option-3 {
+  /*width:400px;*/
+  /*height:50px;*/
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ff7f00;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+
+/* line 61, ../sass/quiz.scss */
+.current {
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  color: #ff7f00;
+  margin: 10px auto;
+  background-color: white;
+  -webkit-box-shadow: red 2px 2px 10px;
+  -moz-box-shadow: red 2px 2px 10px;
+  box-shadow: red 2px 2px 10px;
+}
+
+/* line 2, ../sass/quiz-done.scss */
+.check {
+  background-position: 0 0;
+  height: 64px;
+  width: 64px;
+}
+
+/* line 8, ../sass/quiz-done.scss */
+.cross {
+  background-position: -374px 0;
+  height: 64px;
+  width: 64px;
+}
+
+/* line 17, ../sass/quiz-done.scss */
+.content h1 span {
+  color: #ff7f00;
+}
+/* line 23, ../sass/quiz-done.scss */
+.content .y .check {
+  display: inline-block;
+}
+/* line 27, ../sass/quiz-done.scss */
+.content .y .messONe {
+  display: inline-block;
+}
+/* line 33, ../sass/quiz-done.scss */
+.content .x .cross {
+  display: inline-block;
+}
+/* line 37, ../sass/quiz-done.scss */
+.content .x .messTwo {
+  display: inline-block;
+}
+
+/* line 10, ../sass/app.scss */
 body {
   background-color: deepskyblue;
   font-family: 'Varela Round', sans-serif;
-}
-
-/* line 11, ../sass/app.scss */
-.modal-content {
-  top: 30px;
 }
 
 /* line 15, ../sass/app.scss */
@@ -247,14 +446,21 @@ body {
   text-align: center;
   background-color: white;
   border-radius: 10px;
-  font-size: 30px;
+  /*font-size:30px;*/
+  /*p {
+  	font-size: 12px;
+  }*/
 }
 /* line 130, ../sass/app.scss */
 .content span {
   color: #ff7f00;
 }
+/* line 134, ../sass/app.scss */
+.content p {
+  font-size: 25px;
+}
 
-/* line 135, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 .footer {
   width: 100%;
   height: 50px;
@@ -262,7 +468,7 @@ body {
   color: white;
   margin-top: 30px;
 }
-/* line 142, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 .footer .f-con {
   width: 450px;
   margin: auto;
@@ -270,219 +476,26 @@ body {
   top: 15px;
   position: relative;
 }
-/* line 149, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .footer .f-con span {
   color: #ff7f00;
 }
-/* line 153, ../sass/app.scss */
+/* line 161, ../sass/app.scss */
 .footer .f-con a:link {
   text-decoration: none;
   color: #ff7f00;
 }
-/* line 159, ../sass/app.scss */
+/* line 167, ../sass/app.scss */
 .footer .f-con a:visited {
   text-decoration: none;
   color: #ff7f00;
 }
 
-/* line 166, ../sass/app.scss */
-.modal-body {
+/* line 174, ../sass/app.scss */
+.modal-dialog {
+  margin-top: 100px;
+}
+/* line 176, ../sass/app.scss */
+.modal-dialog .modal-content {
   text-align: center;
-}
-
-/* line 1, ../sass/quiz-intro.scss */
-.container {
-  width: 100%;
-}
-/* line 4, ../sass/quiz-intro.scss */
-.container span {
-  color: #ff7f00;
-}
-/* line 7, ../sass/quiz-intro.scss */
-.container .mess {
-  padding: 10px;
-  /*width: 400px;*/
-  text-align: center;
-  border-radius: 10px;
-  /*text-align: left;*/
-  background-color: white;
-  /*margin: $quesmar;*/
-  /*line-height: 1.5em;*/
-}
-/* line 17, ../sass/quiz-intro.scss */
-.container .mess .btn {
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*body {
-	background-color: $bgcolor;
-	font-family: 'Varela Round', sans-serif;
-}*/
-/*.nav-pane {*/
-/*@include border-bottom-right-radius(10px);*/
-/*background-color:$black;*/
-/*color:$white;*/
-/*font-size: 15px;*/
-/*height: 210px;*/
-/*padding:20px;*/
-/*border-radius:10px;*/
-/*color:$white;*/
-/*top:40px;*/
-/*left:0px;*/
-/*position:fixed;*/
-/*display: none;*/
-/*div {*/
-/*margin-top:10px;*/
-/*margin-bottom:10px;*/
-/*}*/
-/*float:left;
-h3 {
-	text-align: center;
-}*/
-/*}*/
-/* line 30, ../sass/history.scss */
-.container .navbar {
-  /*width: 100%;
-  height: 45px;
-  background-color: $black;
-  margin-bottom:10px;*/
-  /*position: fixed;*/
-  left: 0px;
-  top: 45px;
-  /*z-index: 9999;*/
-  /*.con {*/
-  /*margin: 16px auto;*/
-  /*width: 700px;*/
-  /*word-spacing: 2em;*/
-  /*ul {
-  	li {
-  		color: white;
-  		display: inline-block;
-  	}
-  }*/
-  /*}*/
-  /*ul {
-  	li {
-  		color: white;
-  		display: inline-block;
-  	}
-  }*/
-}
-
-/* line 1, ../sass/quiz.scss */
-body {
-  background-color: deepskyblue;
-}
-
-/* line 6, ../sass/quiz.scss */
-.container {
-  width: 100%;
-}
-/* line 9, ../sass/quiz.scss */
-.container .question {
-  /*width:600px;*/
-  /*height:50px;*/
-  margin: 50px auto;
-  text-align: center;
-  border: 1px solid #ff7f00;
-  border-radius: 10px;
-  background-color: white;
-  padding: 25px;
-  -webkit-box-shadow: red 2px 2px 10px;
-  -moz-box-shadow: red 2px 2px 10px;
-  box-shadow: red 2px 2px 10px;
-}
-/* line 21, ../sass/quiz.scss */
-.container #option-1 {
-  /*width:400px;*/
-  /*height:50px;*/
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  margin: 10px auto;
-  text-align: center;
-  background-color: #ff7f00;
-  -webkit-box-shadow: red 2px 2px 10px;
-  -moz-box-shadow: red 2px 2px 10px;
-  box-shadow: red 2px 2px 10px;
-  position: relative;
-}
-/* line 34, ../sass/quiz.scss */
-.container #option-2 {
-  /*width:400px;*/
-  /*height:50px;*/
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  margin: 10px auto;
-  text-align: center;
-  background-color: #ff7f00;
-  -webkit-box-shadow: red 2px 2px 10px;
-  -moz-box-shadow: red 2px 2px 10px;
-  box-shadow: red 2px 2px 10px;
-}
-/* line 47, ../sass/quiz.scss */
-.container #option-3 {
-  /*width:400px;*/
-  /*height:50px;*/
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  margin: 10px auto;
-  text-align: center;
-  background-color: #ff7f00;
-  -webkit-box-shadow: red 2px 2px 10px;
-  -moz-box-shadow: red 2px 2px 10px;
-  box-shadow: red 2px 2px 10px;
-}
-
-/* line 61, ../sass/quiz.scss */
-.current {
-  width: 400px;
-  height: 50px;
-  border-radius: 10px;
-  color: #ff7f00;
-  margin: 10px auto;
-  background-color: white;
-  -webkit-box-shadow: red 2px 2px 10px;
-  -moz-box-shadow: red 2px 2px 10px;
-  box-shadow: red 2px 2px 10px;
-}
-
-/* line 2, ../sass/quiz-done.scss */
-.check {
-  background-position: 0 0;
-  height: 64px;
-  width: 64px;
-}
-
-/* line 8, ../sass/quiz-done.scss */
-.cross {
-  background-position: -374px 0;
-  height: 64px;
-  width: 64px;
-}
-
-/* line 17, ../sass/quiz-done.scss */
-.content h1 span {
-  color: #ff7f00;
-}
-/* line 23, ../sass/quiz-done.scss */
-.content .y .check {
-  display: inline-block;
-}
-/* line 27, ../sass/quiz-done.scss */
-.content .y .messONe {
-  display: inline-block;
-}
-/* line 33, ../sass/quiz-done.scss */
-.content .x .cross {
-  display: inline-block;
-}
-/* line 37, ../sass/quiz-done.scss */
-.content .x .messTwo {
-  display: inline-block;
 }
