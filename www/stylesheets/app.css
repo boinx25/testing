@@ -175,6 +175,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   /*position: fixed;*/
   left: 0px;
   top: 45px;
+  /*font-size: 16px;*/
   /*z-index: 9999;*/
   /*.con {*/
   /*margin: 16px auto;*/
@@ -194,7 +195,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   	}
   }*/
 }
-/* line 46, ../sass/history.scss */
+/* line 45, ../sass/history.scss */
+.container .navbar a {
+  font-size: 20px;
+}
+/* line 50, ../sass/history.scss */
 .container .evolution {
   padding: 10px;
   /*margin: $defmar2;*/
@@ -202,11 +207,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: #ff7f00;
   border-radius: 10px;
 }
-/* line 53, ../sass/history.scss */
+/* line 57, ../sass/history.scss */
 .container .evolution h1 {
   font-size: 30px;
 }
-/* line 55, ../sass/history.scss */
+/* line 59, ../sass/history.scss */
 .container .evolution h1 span {
   color: deepskyblue;
 }
