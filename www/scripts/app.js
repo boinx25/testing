@@ -1,20 +1,13 @@
   $(document).ready(function (){
 
+  	var menu = "close";
 	var name = " ";
 	var storedName = localStorage.getItem('userName');
 	var a;
 	var id = 1;
-	var AnswerModuleCounter;
-	var QuestionCounter;
-	var correctAnswers1 = 0;
-	var wrongAnswers1 = 0;
-	var correctAnswers2 = 0;
-	var wrongAnswers2 = 0;
-	var correctAnswers3 = 0;
-	var wrongAnswers3 = 0;
-	var AnswersModule1 = [{}];
-	var AnswersModule2 = [{}];
-	var AnswersModule3 = [{}];
+	var AnswersModule1 = [];
+	var AnswersModule2 = [];
+	var AnswersModule3 = [];
 
 	if(storedName != null){
 			$('#register').hide();
@@ -24,7 +17,7 @@
 			$('#home').css('margin-left','5px');
 			$('#Out').html("(Logout)");
 			}else{
-				$('#usericon').show();
+			$('#usericon').show();
 			}
 	// Animation of navigation buttons
 
@@ -52,6 +45,7 @@
 			url: "tags.html",
 			success:function(result){
 				$('.con').html(result);
+				sideBarTransition();
 		}});
 	});
 
@@ -61,26 +55,33 @@
 			url: "history.html",
 			success:function(result){
 				$('.con').html(result);
+			
 		}});
 	});
 
 	// Ajax of Quiz
-	$('#quiz').click(function(){
+		$('#quiz').click(function(){
+		storedName = localStorage.getItem('userName');
 		$.ajax({
 			url: "quiz-intro.html",
 			success:function(result){
 				$(".con").html(result);
+				if(storedName!=null){
+					$('#uName').html(storedName);
+					$('.container #msgQuiz').html("You're about to take the <span>HTML5 quiz</span>. This quiz consists of different questions from different sections of the tutorial. You will be given three choices each question. Click one of the three choices that you think is the best answer for the question.");
+					$('.mess').show();	
+				}else{
+					$('#uName').html(name);
+					$('.container #msgQuiz').html('For you to be able to take the quiz, you should first Register. You can click the Register Icon located at the far right of the Nav Bar above');
+					$('.mess').hide();
+				}
 				bindQuizIntroEvents();
 				bindButton1();
 				bindButton2();
 				bindButton3();
-				if(storedName!= null){
-					$('#uName').html(storedName);	
-				}else{
-					$('#uName').html(name);
-				}
-			}});
-	});
+			}});	
+		});
+	
 
 	//bind Register Button
 	function bindRegBut(){
@@ -92,6 +93,8 @@
 		else{
 			localStorage.setItem('userName',userName);
 			name = localStorage.getItem('userName');
+			$('.mess').fadeIn(800);
+			$('.container #msgQuiz').html("You're about to take the <span>HTML5 quiz</span>. This quiz consists of different questions from different sections of the tutorial. You will be given three choices each question. Click one of the three choices that you think is the best answer for the question.");
 			$('#register').hide();
 			$('.modal-backdrop').hide();
 			$('#usericon').hide();
@@ -154,6 +157,8 @@
 	}
 
 
+
+
 	//QUIZ PART
 	var questions = {
 	set1: [
@@ -194,17 +199,81 @@
 	]
 	}
 
+	//+ Jonas Raoni Soares Silva
+	//@ http://jsfromhell.com/array/shuffle [v1.0]
+	function shuffle(o){ //v1.0
+		for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+		return o;
+	};
+
+	//Function for checking the answers
+	function CheckAnswers(answerModule,questionSet){
+
+		var result = {correctAnswers : 0,
+						wrongAnswers : 0
+					};
+
+		for(var counterAnswer =0; counterAnswer < answerModule.length; counterAnswer++){
+			for(var counterQuestion = 0; counterQuestion < questionSet.length; counterQuestion++){
+				if(answerModule[counterAnswer].id == questionSet[counterQuestion].id){
+					if(answerModule[counterAnswer].Answer == questionSet[counterQuestion].correctAns){
+				
+						result.correctAnswers += 1;
+					}
+					else{
+						result.wrongAnswers += 1;
+					}
+				}					
+			}
+		}
+		return result;
+	}
+	
+	//Function for the Questions
+	function LoadQuestion(question){
+		$('.question').hide();
+		$('#option-1').hide();
+		$('#option-2').hide();
+		$('#option-3').hide();
+
+		$('.question').fadeIn(700).html(question.question);
+		$('#option-1').fadeIn(700).html(question.answers[0].ansText);
+		$('#option-2').fadeIn(700).html(question.answers[1].ansText);
+		$('#option-3').fadeIn(700).html(question.answers[2].ansText);
+	}
+
+	function LoadAnswers(currentNumber,Answers){
+		$('#answersList').append(currentNumber + "." + "   " + Answers.Answer + "<br />");
+	}
+
+	function reviewAnswers(){
+		var c = 1;
+		for(var a =0; a<AnswersModule1.length; a++){
+			LoadAnswers(c,AnswersModule1[a]);
+			c++;
+		}
+		
+		$('#viewAnswers').click(function(){
+			$('.Answers').toggle(500);
+			// $('.Answers').css('display','block');
+		});
+	}
+
+
 	//Module 1 Button
 	function bindButton1(){
 	$('#button1').click(function(){
 			if(AnswersModule1.length >= questions.set1.length){
+				var resultQuiz = CheckAnswers(AnswersModule1,questions.set1);
 				$.ajax({
 					url: "quiz-done.html",
 					success:function(result){
 						$('.con').html(result);
-						$('#correct').html(correctAnswers1);
-						$('#wrong').html(wrongAnswers1);
+						$('#uNameDone').html(name);
+						$('#correct').html(resultQuiz.correctAnswers);
+						$('#wrong').html(resultQuiz.wrongAnswers);
 					retakeQuiz1();
+					reviewAnswers();
 				}});
 			}else{
 			$.ajax({
@@ -213,10 +282,7 @@
 					a=0;
 					id=1;
 					$(".con").html(result);
-					$('.question').html(questions.set1[a].question);
-					$('#option-1').html(questions.set1[a].answers[0].ansText);
-					$('#option-2').html(questions.set1[a].answers[1].ansText);
-					$('#option-3').html(questions.set1[a].answers[2].ansText);
+					LoadQuestion(questions.set1[a]);
 					LoadingQuestionsModule1();
 			 }});
 			}
@@ -227,12 +293,14 @@
 	function bindButton2(){
 	$('#button2').click(function(){
 				if(AnswersModule2.length >= questions.set2.length){
+					var resultQuiz = CheckAnswers(AnswersModule2,questions.set2);
 					$.ajax({
 						url: "quiz-done.html",
 						success:function(result){
 							$('.con').html(result);
-							$('#correct').html(correctAnswers2);
-							$('#wrong').html(wrongAnswers2);
+							$("#uNameDone").html(name);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
 							retakeQuiz2();
 					}});
 				}else{
@@ -242,10 +310,7 @@
 						a=0;
 						id=1;
 						$(".con").html(result);
-						$('.question').html(questions.set2[a].question);
-						$('#option-1').html(questions.set2[a].answers[0].ansText);
-						$('#option-2').html(questions.set2[a].answers[1].ansText);
-						$('#option-3').html(questions.set2[a].answers[2].ansText);
+						LoadQuestion(questions.set2[a]);
 						LoadingQuestionsModule2();
 				 }});
 				}
@@ -256,12 +321,14 @@
 	function bindButton3(){
 	$('#button3').click(function(){
 				if(AnswersModule3.length >= questions.set3.length){
+					var resultQuiz = CheckAnswers(AnswersModule3,questions.set3);
 					$.ajax({
 						url: "quiz-done.html",
 						success:function(result){
 							$('.con').html(result);
-							$('#correct').html(correctAnswers3);
-							$('#wrong').html(wrongAnswers3);
+							$("#uNameDone").html(name);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
 							retakeQuiz3();
 					}});
 				}else{
@@ -271,10 +338,7 @@
 							a=0;
 							id=1;
 							$(".con").html(result);
-							$('.question').html(questions.set3[a].question);
-							$('#option-1').html(questions.set3[a].answers[0].ansText);
-							$('#option-2').html(questions.set3[a].answers[1].ansText);
-							$('#option-3').html(questions.set3[a].answers[2].ansText);
+							LoadQuestion(questions.set3[a]);
 							LoadingQuestionsModule3();
 					 }});
 				}
@@ -282,52 +346,36 @@
 	}
 
 	//Module 1 Questions
+	
 	function LoadingQuestionsModule1(){
+		var randomNumbers = [1,2,3,4,5,6,7,8,9];
+		shuffle(randomNumbers);
 		$('.options').click(function(){
 					var b= $(this).text();
 					AnswersModule1.push({id:id,Answer:b});
-					console.log(a);
+					// console.log(a);
 					console.log(b);
+					console.log(randomNumbers[0]);
+					console.log(randomNumbers);
 					a++;
 					if(a<questions.set1.length){
-					id += 1;
+						id = questions.set1[randomNumbers[0]].id;
 
-					$('.question').hide();
-					$('#option-1').hide();
-					$('#option-2').hide();
-					$('#option-3').hide();
-
-					$('.question').fadeIn(700).html(questions.set1[a].question);
-					$('#option-1').fadeIn(700).html(questions.set1[a].answers[0].ansText);
-					$('#option-2').fadeIn(700).html(questions.set1[a].answers[1].ansText);
-					$('#option-3').fadeIn(700).html(questions.set1[a].answers[2].ansText);
+						LoadQuestion(questions.set1[randomNumbers[0]]);
+						
+						randomNumbers.shift();
 					}else{
-							AnswerModuleCounter = 1;
-							QuestionCounter = 0;
-							for(var counter =2; counter <= AnswersModule1.length; counter++){
-							if(AnswersModule1[AnswerModuleCounter].id == questions.set1[QuestionCounter].id){
-								if(AnswersModule1[AnswerModuleCounter].Answer == questions.set1[QuestionCounter].correctAns){
-									
-									correctAnswers1 += 1;
-								}
-								else{
-									wrongAnswers1 += 1;
-								}
-							
-							AnswerModuleCounter++;
-							QuestionCounter++;
-							
-							}
-						}
-
+						var resultQuiz = CheckAnswers(AnswersModule1,questions.set1);
 						$.ajax({
 						url: "quiz-done.html",
 						success:function(result){
 							$(".con").html(result);
-							$('#correct').html(correctAnswers1);
-							$('#wrong').html(wrongAnswers1);
+							$("#uNameDone").html(name);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
 							console.log(AnswersModule1);
 							retakeQuiz1();
+							reviewAnswers();
 						}});
 					}
 						
@@ -338,6 +386,8 @@
 
 	//Module 2 Questions
 	function LoadingQuestionsModule2(){
+		var randomNumbers = [1,2,3,4,5,6,7,8,9];
+		shuffle(randomNumbers);
 		$('.options').click(function(){
 					var b= $(this).text();
 					AnswersModule2.push({id:id,Answer:b});
@@ -345,44 +395,22 @@
 					// console.log(b);
 					a++;
 					if(a<questions.set2.length){
-					id += 1;	
-					$('.question').hide();
-					$('#option-1').hide();
-					$('#option-2').hide();
-					$('#option-3').hide();
-
-					$('.question').fadeIn(700).html(questions.set2[a].question);
-					$('#option-1').fadeIn(700).html(questions.set2[a].answers[0].ansText);
-					$('#option-2').fadeIn(700).html(questions.set2[a].answers[1].ansText);
-					$('#option-3').fadeIn(700).html(questions.set2[a].answers[2].ansText);
+					id = questions.set2[randomNumbers[0]].id;
+					
+					LoadQuestion(questions.set2[randomNumbers[0]]);
+					randomNumbers.shift();
+					
 					}else{
-						AnswerModuleCounter = 1;
-						QuestionCounter = 0;
-						for(var counter =2; counter <= AnswersModule2.length; counter++){
-								if(AnswersModule2[AnswerModuleCounter].id == questions.set2[QuestionCounter].id){
-									if(AnswersModule2[AnswerModuleCounter].Answer == questions.set2[QuestionCounter].correctAns){
-										
-										correctAnswers2 += 1;
-									}
-									else{
-										wrongAnswers2 += 1;
-									}
-								
-								AnswerModuleCounter++;
-								QuestionCounter++;
-								
-								}
-						}
-
+						console.log(a);
+						console.log(questions.set2.length);
+						var resultQuiz = CheckAnswers(AnswersModule2,questions.set2);
 						$.ajax({
 						url: "quiz-done.html",
 						success:function(result){
 							$(".con").html(result);
-							$('#correct').html(correctAnswers2);
-							$('#wrong').html(wrongAnswers2);
-							console.log(AnswersModule2);
-							console.log(correctAnswers1);
-							console.log(wrongAnswers1);
+							$("#uNameDone").html(name);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
 							retakeQuiz2();
 
 						}});
@@ -392,6 +420,8 @@
 
 	//Module 3 Questions
 	function LoadingQuestionsModule3(){
+		var randomNumbers = [1,2,3,4,5,6,7,8,9];
+		shuffle(randomNumbers);
 		$('.options').click(function(){
 					var b=$(this).text();
 					AnswersModule3.push({id:id,Answer:b});
@@ -399,41 +429,20 @@
 					console.log(b);
 					a++;
 					if(a<questions.set3.length){
-					id += 1;
-					$('.question').hide();
-					$('#option-1').hide();
-					$('#option-2').hide();
-					$('#option-3').hide();
-
-					$('.question').fadeIn(700).html(questions.set3[a].question);
-					$('#option-1').fadeIn(700).html(questions.set3[a].answers[0].ansText);
-					$('#option-2').fadeIn(700).html(questions.set3[a].answers[1].ansText);
-					$('#option-3').fadeIn(700).html(questions.set3[a].answers[2].ansText);
+						id = questions.set3[randomNumbers[0]].id;
+					
+						LoadQuestion(questions.set3[randomNumbers[0]]);
+						
+						randomNumbers.shift();
 					}else{
-						AnswerModuleCounter = 1;
-						QuestionCounter = 0;
-						for(var counter =2; counter <= AnswersModule3.length; counter++){
-								if(AnswersModule3[AnswerModuleCounter].id == questions.set3[QuestionCounter].id){
-									if(AnswersModule3[AnswerModuleCounter].Answer == questions.set3[QuestionCounter].correctAns){
-										
-										correctAnswers3 += 1;
-									}
-									else{
-										wrongAnswers3 += 1;
-									}
-								
-								AnswerModuleCounter++;
-								QuestionCounter++;
-								
-								}
-						}
-
+						var resultQuiz = CheckAnswers(AnswersModule3,questions.set3);
 						$.ajax({
 						url: "quiz-done.html",
 						success:function(result){
 							$(".con").html(result);
-							$('#correct').html(correctAnswers3);
-							$('#wrong').html(wrongAnswers3);
+							$("#uNameDone").html(name);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
 							console.log(AnswersModule3);
 							retakeQuiz3();
 
@@ -444,23 +453,14 @@
 
 	function retakeQuiz1(){
 		$('#retakeQuiz').click(function(){
-			correctAnswers1 = 0;
-			wrongAnswers1 = 0;
 			$.ajax({
 				url: "quiz.html",
 				success:function(result){
 					a=0;
 					id=1;
-					AnswersModule1 = [{}];
+					AnswersModule1 = [];
 					$(".con").html(result);
-					$('.question').html(questions.set1[a].question);
-					console.log(questions.set1[a].question);
-					$('#option-1').html(questions.set1[a].answers[0].ansText);
-					$('#option-2').html(questions.set1[a].answers[1].ansText);
-					$('#option-3').html(questions.set1[a].answers[2].ansText);
-					console.log(questions.set1[a].answers[0].ansText);
-					console.log(questions.set1[a].answers[1].ansText);
-					console.log(questions.set1[a].answers[2].ansText);
+					LoadQuestion(questions.set1[a]);
 					LoadingQuestionsModule1();
 			 }});
 		});
@@ -468,23 +468,14 @@
 
 	function retakeQuiz2(){
 		$('#retakeQuiz').click(function(){
-			correctAnswers2 = 0;
-			wrongAnswers2 = 0;
 			$.ajax({
 				url: "quiz.html",
 				success:function(result){
 					a=0;
 					id=1;
-					AnswersModule2 = [{}];
+					AnswersModule2 = [];
 					$(".con").html(result);
-					$('.question').html(questions.set2[a].question);
-					console.log(questions.set2[a].question);
-					$('#option-1').html(questions.set2[a].answers[0].ansText);
-					$('#option-2').html(questions.set2[a].answers[1].ansText);
-					$('#option-3').html(questions.set2[a].answers[2].ansText);
-					console.log(questions.set2[a].answers[0].ansText);
-					console.log(questions.set2[a].answers[1].ansText);
-					console.log(questions.set2[a].answers[2].ansText);
+					LoadQuestion(questions.set2[a]);
 					LoadingQuestionsModule2();
 			 }});
 		});
@@ -492,25 +483,38 @@
 
 	function retakeQuiz3(){
 		$('#retakeQuiz').click(function(){
-			correctAnswers3 = 0;
-			wrongAnswers3 = 0;
 			$.ajax({
 				url: "quiz.html",
 				success:function(result){
 					a=0;
 					id=1;
-					AnswersModule3 = [{}];
+					AnswersModule3 = [];
 					$(".con").html(result);
-					$('.question').html(questions.set3[a].question);
-					console.log(questions.set3[a].question);
-					$('#option-1').html(questions.set3[a].answers[0].ansText);
-					$('#option-2').html(questions.set3[a].answers[1].ansText);
-					$('#option-3').html(questions.set3[a].answers[2].ansText);
-					console.log(questions.set3[a].answers[0].ansText);
-					console.log(questions.set3[a].answers[1].ansText);
-					console.log(questions.set3[a].answers[2].ansText);
+					LoadQuestion(questions.set3[a]);
 					LoadingQuestionsModule3();
 			 }});
 		});
 	}
+
+	
+	// sidebar
+
+  	function sideBarTransition() {
+
+  		$('.show').click(function(){
+
+  			if (menu == "close"){
+
+  				$('.navigation').css('-webkit-transform','translate(0, 0)');
+  				menu = "open"
+  			} else {
+  				$('.navigation').css('-webkit-transform','translate(-100%, 0)');
+  				menu = "close"
+  			}
+			
+		});
+
+  	}
+
+
 });
