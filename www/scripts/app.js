@@ -29,6 +29,21 @@
 		$(this).animate({opacity:'.25'},600);
 	 });
 
+	// Ajax of HTML5
+
+	$('htm5').click(function(){
+		$.ajax ({
+
+			url: 'html5.html',
+			success:function(result){
+				$('.con').html(result);
+				sideBarTransition();
+				sideBarLinkClick();
+			}
+
+		});
+	});
+
 	// Ajax of Home Button
 	$('#home').click(function(){
 		$.ajax({
@@ -46,6 +61,7 @@
 			success:function(result){
 				$('.con').html(result);
 				sideBarTransition();
+				sideBarLinkClick();
 		}});
 	});
 
@@ -508,12 +524,21 @@
   				$('.navigation').css('-webkit-transform','translate(0, 0)');
   				menu = "open"
   			} else {
+
   				$('.navigation').css('-webkit-transform','translate(-100%, 0)');
   				menu = "close"
   			}
 			
 		});
 
+  	}
+
+  	function sideBarLinkClick() {
+  		$('nav a').click(function(){
+
+  			$('.navigation').css('-webkit-transform','translate(-100%, 0)');
+
+  		});
   	}
 
 

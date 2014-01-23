@@ -1,23 +1,29 @@
+<!-- NAVIGATION ==============-->
+
 <div class="navigation">
 	<nav>
-		<a href="#">Root Element</a>
-		<a href="#">Document Metadata</a>
-		<a href="#">Scripting</a>
-		<a href="#">Sections</a>
-		<a href="#">Grouping Content<!-- <b class = "caret"> --></a>
-		<a href="#">Embedded Contents</a>
-		<a href="#">Text-level Semantics</a>
-		<a href="#">Tabular Data</a>
-		<a href="#">Forms</a>
-		<a href="#">HTML5 Tags</a>
+		<a href="#root">Root Element</a>
+		<a href="#meta">Document Metadata</a>
+		<a href="#script">Scripting</a>
+		<a href="#sec">Sections</a>
+		<a href="#group">Grouping Content</a>
+		<a href="#embed">Embedded Contents</a>
+		<a href="#sem">Text-level Semantics</a>
+		<a href="#tab">Tabular Data</a>
+		<a href="#form">Forms</a>
+		<a id = "htm5" href = "#">Proceed to HTML5 Tags...</a>
 	</nav>
 	<div class="show"> </div>
 </div>
 <div class="contain">
-	<div class="pageHead"><h2 class = "page-header">Root Element</h2></div>
+
+<!-- DOCUMENT ROOT ELEMENT =============================================
+==================================================================== -->
+
+	<div id = "root" class="pageHead"><h2 class = "page-header">Root Element</h2></div>
 	<h1 class = "h1"><span class="label label-warning">HTML</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < html > Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
 	</div>
 
 	<div class="printScreen">
@@ -25,11 +31,16 @@
 		<!-- <img src="../images/html.png" alt=""> -->
 	</div>
 
+<!-- DOCUMENT METADATA =================================================
+==================================================================== -->
 
-	<div class="pageHead"><h2 class = "page-header">Document Metadata</h2></div>
+
+
+
+	<div id = "meta" class="pageHead"><h2 class = "page-header">Document Metadata</h2></div>
 	<h1 class = "h1"><span class="label label-warning">HEAD</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < head > element represents a collection of metadata about the document, including links to or definitions of scripts and style sheets</p>
 	</div>
 
 	<div class="printScreen">
@@ -39,7 +50,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">TITLE</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML Title Element < title > defines the title of the document, shown in a browser's title bar or on the page's tab. It can only contain text and any contained tags are not interpreted.</p>
 	</div>
 
 	<div class="printScreen">
@@ -49,7 +60,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">LINK</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < link > Element specifies relationships between the current document and external resource. Possible uses for this element include defining a relational framework for navigation.This Element is most used to link to style sheets</p>
 	</div>
 
 	<div class="printScreen">
@@ -59,7 +70,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">STYLE</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < style > element contains style information for a document, or a part of document. The specific style information is contained inside of this element, usually in the CSS. Used to create an inline styling for html document</p>
 	</div>
 
 	<div class="printScreen">
@@ -67,10 +78,17 @@
 		<!-- <img src="../images/html.png" alt=""> -->
 	</div>
 
-	<div class="pageHead"><h2 class = "page-header">Scripting</h2></div>
+<!-- DOCUMENT SCRIPTING ================================================
+==================================================================== -->
+
+
+
+
+	<div id = "script" class="pageHead"><h2 class = "page-header">Scripting</h2></div>
 	<h1 class = "h1"><span class="label label-warning">SCRIPT</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < script > element is used to embed or reference an executable script within an HTML or XHTML document.</p>
+		<p>Scripts without async or defer attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.</p>
 	</div>
 
 	<div class="printScreen">
@@ -78,10 +96,16 @@
 		<!-- <img src="../images/html.png" alt=""> -->
 	</div>
 
-	<div class="pageHead"><h2 class = "page-header">Section</h2></div>
+<!-- DOCUMENT SECTION ==================================================
+==================================================================== -->
+
+
+
+
+	<div id = "sec" class="pageHead"><h2 class = "page-header">Section</h2></div>
 	<h1 class = "h1"><span class="label label-warning">BODY</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < body > element represents the content of an HTML document. There is only one <body> element in a document. All the contents of the document should go within this tag.</p>
 	</div>
 
 	<div class="printScreen">
@@ -91,7 +115,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">H1 TO H6</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>Heading elements implement six levels of document headings, < h1 > is the most important and < h6 > is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically.</p>
 	</div>
 
 	<div class="printScreen">
@@ -100,10 +124,17 @@
 	</div>
 
 
-	<div class="pageHead"><h2 class = "page-header">Grouping Content</h2></div>
+<!-- DOCUMENT GROUPING CONTENT =========================================
+==================================================================== -->
+
+
+
+
+
+	<div id = "group" class="pageHead"><h2 class = "page-header">Grouping Content</h2></div>
 	<h1 class = "h1"><span class="label label-warning">P</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < p > element (or HTML Paragraph Element) represents a paragraph of text. Paragraphs are block-level elements.</p>
 	</div>
 
 	<div class="printScreen">
@@ -113,7 +144,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">OL</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < ol > Element (or HTML Ordered List Element) represents an ordered list of items. Typically, ordered-list items are displayed with a preceding numbering, which can be of any form, like numerals, letters or Romans numerals or even simple bullets. This numbered style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property.</p>
 	</div>
 
 	<div class="printScreen">
@@ -123,7 +154,9 @@
 
 	<h1 class = "h1"><span class="label label-warning">UL</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML unordered list element < ul > represents an unordered list of items, namely a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property.</p>
+
+		<p>There is no limitation to the depth and imbrication of lists defined with the <ol> and <ul> elements.</p>
 	</div>
 
 	<div class="printScreen">
@@ -133,7 +166,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">LI</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML List item element < li > is used to represent a list item. It should be contained in an ordered list < ol >, an unordered list < ul > or a menu < menu >, where it represents a single entity in that list. In menus and unordered lists, list items are ordinarily displayed using bullet points. In ordered lists, they are usually displayed with some ascending counter on the left such as a number or letter</p>
 	</div>
 
 	<div class="printScreen">
@@ -143,7 +176,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">DIV</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < div > element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as < article > or < nav >) is appropriate.</p>
 	</div>
 
 	<div class="printScreen">
@@ -151,11 +184,19 @@
 		<!-- <img src="../images/html.png" alt=""> -->
 	</div>
 
+
+
+<!-- DOCUMENT TEXT-LEVEL SEMANTICS =====================================
+==================================================================== -->
+
+
+
+
 	
-	<div class="pageHead"><h2 class = "page-header">Text-level Semantics</h2></div>
+	<div id = "sem" class="pageHead"><h2 class = "page-header">Text-level Semantics</h2></div>
 	<h1 class = "h1"><span class="label label-warning">A</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < a > Element (or the HTML Anchor Element) defines a hyperlink, the named target destination for a hyperlink, or both.</p>
 	</div>
 
 	<div class="printScreen">
@@ -170,7 +211,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">EM</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < em > element (or HTML Emphasis Element) marks text that has stress emphasis. The < em > element can be nested, with each level of nesting indicating a greater degree of emphasis. Typically this element is displayed in italic type.</p>
 	</div>
 
 	<div class="printScreen">
@@ -180,7 +221,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">STRONG</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML Strong Element < strong > gives text strong importance, and is typically displayed in bold.</p>
 	</div>
 
 	<div class="printScreen">
@@ -190,7 +231,9 @@
 
 	<h1 class = "h1"><span class="label label-warning">SUB AND SUP</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML Subscript Element < sub > defines a span of text that should be displayed, for typographic reasons, lower, and often smaller, than the main span of text.</p>
+
+		<p>The HTML Superscript Element < sup > defines a span of text that should be displayed, for typographic reasons, higher, and often smaller, than the main span of text.</p>
 	</div>
 
 	<div class="printScreen">
@@ -200,7 +243,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">SPAN</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < span > element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes). < span > is very much like a < div > element, but < div > is a block-level element whereas a < span > is an inline element.</p>
 	</div>
 
 	<div class="printScreen">
@@ -210,7 +253,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">BR</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < br > Element (or HTML Line Break Element) produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</p>
 	</div>
 
 	<div class="printScreen">
@@ -219,10 +262,16 @@
 	</div>
 
 
-	<div class="pageHead"><h2 class = "page-header">Embedded Content</h2></div>
+<!-- DOCUMENT EMBEDDED CONTENT =========================================
+==================================================================== -->
+
+
+
+
+	<div id = "embed" class="pageHead"><h2 class = "page-header">Embedded Content</h2></div>
 	<h1 class = "h1"><span class="label label-warning">IMG</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < img > Element (or HTML Image Element) represents an image of the document.</p>
 	</div>
 
 	<div class="printScreen">
@@ -231,20 +280,18 @@
 	</div>
 
 
-	<div class="pageHead"><h2 class = "page-header">Tabular Data</h2></div>
+
+<!-- DOCUMENT TABULAR DATA ============================================
+==================================================================== -->
+
+
+
+
+
+	<div id = "tab" class="pageHead"><h2 class = "page-header">Tabular Data</h2></div>
 	<h1 class = "h1"><span class="label label-warning">TABLE</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
-	</div>
-
-	<div class="printScreen">
-		<h1>Image HERE!</h1>
-		<!-- <img src="../images/html.png" alt=""> -->
-	</div>
-
-	<h1 class = "h1"><span class="label label-warning">COL</span></h1>
-	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML Table Element < table > represents data in two dimensions or more.</p>
 	</div>
 
 	<div class="printScreen">
@@ -254,7 +301,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">TH</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML Table Header Cell Element < th > defines a cell that is a header for a group of cells of a table. The group of cells that the header refers to is defined by the scope and headers attribute</p>
 	</div>
 
 	<div class="printScreen">
@@ -264,7 +311,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">TR</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML Table Row Element < tr > defines a row of cells in a table. Those can be a mix of <td> and <th> elements.</p>
 	</div>
 
 	<div class="printScreen">
@@ -274,7 +321,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">TD</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The Table cell HTML element < td > defines a cell of a table that contains data. It participates in the table model.</p>
 	</div>
 
 	<div class="printScreen">
@@ -283,10 +330,18 @@
 	</div>
 
 
-	<div class="pageHead"><h2 class = "page-header">Forms</h2></div>
+
+<!-- DOCUMENT FORMS ====================================================
+==================================================================== -->
+
+
+
+
+
+	<div id = "form" class="pageHead"><h2 class = "page-header">Forms</h2></div>
 	<h1 class = "h1"><span class="label label-warning">FORM</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < form > element represents a section of document that contains interactive controls that enable a user to submit information to a web server.</p>
 	</div>
 
 	<div class="printScreen">
@@ -296,7 +351,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">LABEL</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < label > Element represents a caption for an item in a user interface. It can be associated with a control either by placing the control element inside the label element, or by using the for attribute. Such a control is called the labeled control of the label element.</p>
 	</div>
 
 	<div class="printScreen">
@@ -306,7 +361,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">INPUT</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < input > element is used to create interactive controls for web-based forms.</p>
 	</div>
 
 	<div class="printScreen">
@@ -316,7 +371,7 @@
 
 	<h1 class = "h1"><span class="label label-warning">BUTTON</span></h1>
 	<div class="definition">
-		<p>The HTML <html> Element (or HTML root element) represents the root of an HTML or XHTML document. All other elements must be descendants of this element.</p>
+		<p>The HTML < button > Element represents a clickable button.</p>
 	</div>
 	
 	<div class="printScreen">
