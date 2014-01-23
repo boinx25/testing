@@ -454,31 +454,30 @@ body {
 body {
   background-color: deepskyblue;
   font-family: 'Varela Round', sans-serif;
-  overflow-y: hidden;
 }
 
-/* line 17, ../sass/app.scss */
+/* line 16, ../sass/app.scss */
 .container {
   width: 100%;
   margin-top: 50px;
 }
-/* line 21, ../sass/app.scss */
+/* line 20, ../sass/app.scss */
 .container .con {
   width: 100%;
   margin: 0px auto;
 }
-/* line 25, ../sass/app.scss */
+/* line 24, ../sass/app.scss */
 .container .con .logo {
   width: 212px;
   margin: 30px auto;
 }
 
-/* line 32, ../sass/app.scss */
+/* line 31, ../sass/app.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 36, ../sass/app.scss */
+/* line 35, ../sass/app.scss */
 .header {
   width: 100%;
   height: 45px;
@@ -489,15 +488,15 @@ body {
   top: 0;
   z-index: 9999;
 }
-/* line 46, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 .header .nav {
-  width: 390px;
+  width: 355px;
   top: 5px;
   margin: auto;
   position: relative;
   font-size: 10px;
 }
-/* line 53, ../sass/app.scss */
+/* line 52, ../sass/app.scss */
 .header .nav #home {
   background-position: -96px 0;
   height: 32px;
@@ -507,7 +506,7 @@ body {
   margin-right: 20px;
   opacity: .25;
 }
-/* line 63, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .header .nav #history {
   background-position: -64px 0;
   height: 32px;
@@ -517,7 +516,7 @@ body {
   margin-right: 20px;
   opacity: .25;
 }
-/* line 73, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .header .nav #quiz {
   background-position: -342px 0;
   height: 32px;
@@ -527,7 +526,7 @@ body {
   margin-right: 20px;
   opacity: .25;
 }
-/* line 83, ../sass/app.scss */
+/* line 82, ../sass/app.scss */
 .header .nav #htmltags {
   background-position: -150px 0;
   height: 32px;
@@ -537,7 +536,7 @@ body {
   margin-right: 20px;
   opacity: .25;
 }
-/* line 93, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 .header .nav #usericon {
   background-position: -182px 0;
   height: 32px;
@@ -548,21 +547,21 @@ body {
   opacity: .25;
   top: 5px;
 }
-/* line 104, ../sass/app.scss */
+/* line 103, ../sass/app.scss */
 .header .nav #WelcomeM {
   display: inline-block;
   position: relative;
   top: -20px;
 }
-/* line 111, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 .header .nav #LogOut {
   display: inline-block;
   position: relative;
   top: -2px;
-  left: -55px;
+  left: -65px;
 }
 
-/* line 122, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .content {
   /*width:500px;*/
   /*height:170px;*/
@@ -576,16 +575,16 @@ body {
   	font-size: 12px;
   }*/
 }
-/* line 132, ../sass/app.scss */
+/* line 131, ../sass/app.scss */
 .content span {
   color: #ff7f00;
 }
-/* line 136, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 .content p {
   font-size: 25px;
 }
 
-/* line 145, ../sass/app.scss */
+/* line 144, ../sass/app.scss */
 .footer {
   width: 100%;
   height: 50px;
@@ -593,7 +592,7 @@ body {
   color: white;
   margin-top: 30px;
 }
-/* line 152, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
 .footer .f-con {
   width: 450px;
   margin: auto;
@@ -601,26 +600,26 @@ body {
   top: 15px;
   position: relative;
 }
-/* line 159, ../sass/app.scss */
+/* line 158, ../sass/app.scss */
 .footer .f-con span {
   color: #ff7f00;
 }
-/* line 163, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .footer .f-con a:link {
   text-decoration: none;
   color: #ff7f00;
 }
-/* line 168, ../sass/app.scss */
+/* line 167, ../sass/app.scss */
 .footer .f-con a:visited {
   text-decoration: none;
   color: #ff7f00;
 }
 
-/* line 175, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 .modal-dialog {
   margin-top: 100px;
 }
-/* line 177, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 .modal-dialog .modal-content {
   text-align: center;
 }

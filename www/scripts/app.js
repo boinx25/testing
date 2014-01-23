@@ -31,18 +31,14 @@
 
 	// Ajax of HTML5
 
-	$('htm5').click(function(){
-		$.ajax ({
-
-			url: 'html5.html',
-			success:function(result){
-				$('.con').html(result);
-				sideBarTransition();
-				sideBarLinkClick();
-			}
-
-		});
-	});
+	// $("#htm5").click(function(){
+	// 	$.ajax({
+	// 		url: "html5.html",
+	// 		success:function(result){
+	// 			$('.con').html(result);
+	// 			sideBarTransition();
+	// 		}});
+	// });
 
 	// Ajax of Home Button
 	$('#home').click(function(){
@@ -62,6 +58,16 @@
 				$('.con').html(result);
 				sideBarTransition();
 				sideBarLinkClick();
+				$("#htm5").click(function(){
+					$.ajax({
+						url: "html5.html",
+						success:function(result){
+							$('.con').html(result);
+							sideBarTransition();
+						}
+					});
+				});
+				
 		}});
 	});
 
@@ -110,7 +116,7 @@
 			localStorage.setItem('userName',userName);
 			name = localStorage.getItem('userName');
 			$('.mess').fadeIn(800);
-			$('.container #msgQuiz').html("You're about to take the <span>HTML5 quiz</span>. This quiz consists of different questions from different sections of the tutorial. You will be given three choices each question. Click one of the three choices that you think is the best answer for the question.");
+			$('.container #msgQuiz').html("You're about to take the <span>HTML5 quiz</span>. This quiz consists of different questions from different sections of the tutorial. You will be given three choices each question. Click one of the three choices that you think is the best answer for the question. Module 1 cover: HTML metadata, History. Module 2 cover: History and evolution of HTML. Module 3 cover: HTML4.01 tags.");
 			$('#register').hide();
 			$('.modal-backdrop').hide();
 			$('#usericon').hide();
@@ -262,10 +268,10 @@
 		$('#answersList').append(currentNumber + "." + "   " + Answers.Answer + "<br />");
 	}
 
-	function reviewAnswers(){
+	function reviewAnswers(AnswersGroup){
 		var c = 1;
-		for(var a =0; a<AnswersModule1.length; a++){
-			LoadAnswers(c,AnswersModule1[a]);
+		for(var a =0; a<AnswersGroup.length; a++){
+			LoadAnswers(c,AnswersGroup[a]);
 			c++;
 		}
 		
@@ -289,7 +295,7 @@
 						$('#correct').html(resultQuiz.correctAnswers);
 						$('#wrong').html(resultQuiz.wrongAnswers);
 					retakeQuiz1();
-					reviewAnswers();
+					reviewAnswers(AnswersModule1);
 				}});
 			}else{
 			$.ajax({
@@ -318,6 +324,7 @@
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
 							retakeQuiz2();
+							reviewAnswers(AnswersModule2);
 					}});
 				}else{
 					$.ajax({
@@ -346,6 +353,7 @@
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
 							retakeQuiz3();
+							reviewAnswers(AnswersModule3);
 					}});
 				}else{
 					$.ajax({
@@ -390,8 +398,8 @@
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
 							console.log(AnswersModule1);
+							reviewAnswers(AnswersModule1);
 							retakeQuiz1();
-							reviewAnswers();
 						}});
 					}
 						
@@ -427,6 +435,7 @@
 							$("#uNameDone").html(name);
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
+							reviewAnswers(AnswersModule2);
 							retakeQuiz2();
 
 						}});
@@ -460,6 +469,7 @@
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
 							console.log(AnswersModule3);
+							reviewAnswers(AnswersModule3);
 							retakeQuiz3();
 
 						}});
@@ -512,32 +522,24 @@
 		});
 	}
 
-	
 	// sidebar
 
   	function sideBarTransition() {
 
   		$('.show').click(function(){
-
   			if (menu == "close"){
-
   				$('.navigation').css('-webkit-transform','translate(0, 0)');
   				menu = "open"
   			} else {
-
   				$('.navigation').css('-webkit-transform','translate(-100%, 0)');
   				menu = "close"
   			}
-			
-		});
-
+			});
   	}
 
   	function sideBarLinkClick() {
   		$('nav a').click(function(){
-
   			$('.navigation').css('-webkit-transform','translate(-100%, 0)');
-
   		});
   	}
 
