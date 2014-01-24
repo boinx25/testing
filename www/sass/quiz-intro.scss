@@ -1,5 +1,6 @@
 .jumbotron {
 	margin-top:20px;
+	
 	.container {
 		width: 100%;
 		
@@ -11,10 +12,7 @@
 			width: 100%;
 			text-align: center;
 			border-radius: 10px;
-			/*text-align: left;*/
 			background-color: $white;
-			/*margin: $quesmar;*/
-			/*line-height: 1.5em;*/
 
 			.btn {
 				margin-bottom: 10px;
@@ -38,11 +36,8 @@
 		width: 100%;
 		text-align: center;
 		border-radius: 10px;
-		/*text-align: left;*/
 		background-color: $white;
-		/*margin: $quesmar;*/
-		/*line-height: 1.5em;*/
-
+		
 		.btn {
 			margin-bottom: 10px;
 			width: 120px;

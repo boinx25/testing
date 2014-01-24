@@ -5,9 +5,7 @@
 	height:100%;
 	width:280px;
 	background-color: $black;
-
 	-webkit-transform: translate(-100%, 0);
-
 	-webkit-transition: all 1s ease;
 
 	nav {
@@ -16,7 +14,6 @@
 			font-size:20px;
 			display:block;
 			text-decoration:none;
-			/*border-bottom:1px solid $white;*/
 			padding: 15px 30px;
 		}
 
@@ -30,12 +27,9 @@
 		left:280px;
 	}
 }
-
 .contain {
 	margin: 13px;
-}
 
-.contain {
 	.definition {
 		padding:10px;
 		margin: $defmar2;
@@ -47,16 +41,7 @@
 			color:$orange;
 		}
 	}
-}
-.contain {
-		h1 {
-		span {
-			color:$white;
-		}
-	}
-}
 
-.contain {
 	.printScreen {
 		padding:10px;
 		height: 300px;
@@ -67,10 +52,10 @@
 		border-radius: 10px;
 		text-align: center;
 	}
-}
 
-.contain {
-	.pageHeader {
-		margin-top: 20px;
+	h1 {
+		span {
+			color:$white;
+		}
 	}
 }

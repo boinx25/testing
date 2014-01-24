@@ -1,4 +1,3 @@
-
 .container {
 	.cont {
 		padding:10px;
@@ -10,38 +9,10 @@
 		span {
 			color: $orange;
 		}
-
-		h2 {
-			font-size: 20px;
-		}
 	}
 	.navbar {
-		/*width: 100%;
-		height: 45px;
-		background-color: $black;
-		margin-bottom:10px;*/
-		/*position: fixed;*/
 		left: 0px;
 		top: 45px;
-		/*font-size: 16px;*/
-		/*z-index: 9999;*/
-		/*.con {*/
-			/*margin: 16px auto;*/
-			/*width: 700px;*/
-			/*word-spacing: 2em;*/
-			/*ul {
-				li {
-					color: white;
-					display: inline-block;
-				}
-			}*/
-		/*}*/
-		/*ul {
-			li {
-				color: white;
-				display: inline-block;
-			}
-		}*/
 		a {
 			font-size: 20px;
 		}
@@ -49,13 +20,11 @@
 
 	.evolution {
 		padding:10px;
-		/*margin: $defmar2;*/
 		text-align:center;
 		background-color:$orange;
 		border-radius: 10px;
 
 		h1 {
-			font-size: 30px;
 			span {
 				color:$bgcolor;
 			}

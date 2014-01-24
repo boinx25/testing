@@ -1,47 +1,11 @@
-
-.check {
-	@include icons-sprite(correct);
-	height: $wch;
-	width: $wcw;
-}
-
-.cross {
-	@include icons-sprite(wrong);
-	height: $wch;
-	width: $wcw;
-}
-
 .container {
-
-	h1{
-		span {
-			color:$orange;
+	.score-block{
+		div{
+			display: inline-block; 
+			vertical-align: top; 
+			margin-top:13px;
 		}
-	}
-
-	.y {
-		.check {
-			display: inline-block;
-		}
-
-		.messONe {
-			display: inline-block;
-		}
-	}
-
-	.x {
-		.cross {
-			display: inline-block;
-		}
-
-		.messTwo {
-			display: inline-block;
-		}
-	}
-
-	.button{
-		margin-top:5px;
-	}
+	}	
 
 	.Answers{
 		border-radius:10px;
@@ -49,6 +13,13 @@
 		padding:10px;
 		display:none;
 		font-size:16px;
-	}
-	
+
+		#mistake{
+			color:red;
+		}
+
+		#right{
+			color:green;
+		}
+	}	
 }

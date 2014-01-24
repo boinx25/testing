@@ -1,6 +1,7 @@
+$icons-sprite-dimensions: true;
+
 @import 'compass';
 @import 'default';
-@import 'buttons';
 @import 'screen';
 @import 'quiz-intro';
 @import 'history';
@@ -12,6 +13,18 @@ body {
 	background-color: $bgcolor;
 	font-family: 'Varela Round', sans-serif;
 }
+
+i{display: inline-block;}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 26px; }
+h4 { font-size: 20px; }
+
+.space1{margin-bottom: 5px;}
+.space2{margin-bottom: 10px;}
+.space3{margin-bottom: 15px;}
+.space4{margin-bottom: 20px;}
 
 .container {
 	width: 100%;
@@ -39,65 +52,26 @@ body {
 	color:$white;
 	margin-bottom:10px;
 	position: fixed;
-	top: 0;
+	top: -1px;
 	z-index: 9999;
 
 	.nav {
-		width:355px;
+		width:272px;
 		top: 5px;
 		margin: auto;
 		position: relative;
 		font-size:10px;
+		div{
+			height: $iconhw;
+			width: $iconhw;
+			display:inline-block;
+			margin-right: 20px;
+			opacity: .25;
+		}
 
 		#home {
 			@include icons-sprite(home);
-			height: $iconhw;
-			width: $iconhw;
-			display:inline-block;
-			margin-left: 50px;
-			margin-right: 20px;
-			opacity: .25;
-		}
-
-		#history {
-			@include icons-sprite(history);
-			height: $iconhw;
-			width:$iconhw;
-			display:inline-block;
-			/*margin-left: 20px;*/
-			margin-right: 20px;
-			opacity: .25;
-		}
-
-		#quiz {
-			@include icons-sprite(quiz);
-			height: $iconhw;
-			width: $iconhw;
-			display:inline-block;
-			/*margin-left: 20px;*/
-			margin-right: 20px;
-			opacity: .25;
-		}
-
-		#htmltags {
-			@include icons-sprite(htmltag);
-			height: $iconhw;
-			width: $iconhw;
-			display:inline-block;
-			/*margin-left: 20px;*/
-			margin-right: 20px;
-			opacity: .25;
-		}
-
-		#usericon {
-			@include icons-sprite(login);
-			height: $iconhw;
-			width: $iconhw;
-			display:inline-block;
-			/*margin-left: 20px;*/
-			/*margin-right: 20px;*/
-			opacity: .25;
-			top: 5px;
+			
 		}
 
 		#WelcomeM{
@@ -111,22 +85,18 @@ body {
 			display:inline-block;
 			position:relative;
 			top:-2px;
-			left:-65px;
+			left:-40px;
 		}
 	}
 }
 
 
-
 .content {
-	/*width:500px;*/
-	/*height:170px;*/
 	padding:10px;
 	margin: $defmar2;
 	text-align:center;
 	background-color:$white;
 	border-radius: 10px;
-	/*font-size:30px;*/
 
 	span {
 		color: $orange;
@@ -135,10 +105,6 @@ body {
 	p {
 		font-size: 25px;
 	}
-
-	/*p {
-		font-size: 12px;
-	}*/
 }
 
 .footer {
