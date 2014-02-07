@@ -1,33 +1,64 @@
-.container {
-	.cont {
-		padding:10px;
-		margin: $defmar2;
-		text-align:center;
-		background-color:$white;
-		border-radius: 10px;
+.cont {
+	padding:10px;
+	margin: $defmar2;
+	text-align:center;
+	background-color:$white;
+	border-radius: 10px;
 
+	span {
+		color: $orange;
+	}
+}
+.navbar {
+	left: 0px;
+	top: 45px;
+	a {
+		font-size: 20px;
+	}
+}
+
+.evolution {
+	padding:10px;
+	text-align:center;
+	background-color:$orange;
+	border-radius: 10px;
+
+	h1 {
 		span {
-			color: $orange;
-		}
-	}
-	.navbar {
-		left: 0px;
-		top: 45px;
-		a {
-			font-size: 20px;
-		}
-	}
-
-	.evolution {
-		padding:10px;
-		text-align:center;
-		background-color:$orange;
-		border-radius: 10px;
-
-		h1 {
-			span {
-				color:$bgcolor;
-			}
+			color:$bgcolor;
 		}
 	}
 }
+
+
+.navigation {
+	position:fixed;
+	top:49px;
+	left:0px;
+	height:100%;
+	width:280px;
+	background-color: $black;
+	-webkit-transform: translate(-100%, 0);
+	-webkit-transition: all 1s ease;
+
+	nav {
+		a {
+			color:$white;
+			font-size:20px;
+			display:block;
+			text-decoration:none;
+			padding: 15px 30px;
+		}
+
+	}
+	.show {
+		@include icons-sprite(show);
+		height:60px;
+		width:32px;
+		position:absolute;
+		top:31%;
+		left:280px;
+	}
+}
+
+

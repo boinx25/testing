@@ -44,8 +44,8 @@
 
 	.printScreen {
 		padding:10px;
-		height: 300px;
-		width: 300px;
+		overflow: auto;
+		overflow: auto;
 		margin: $defmar2;
 		text-align:center;
 		background-color:$white;

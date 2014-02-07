@@ -210,37 +210,70 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-right: auto;
 }
 
-/* line 2, ../sass/history.scss */
-.container .cont {
+/* line 1, ../sass/history.scss */
+.cont {
   padding: 10px;
   margin: 30px auto;
   text-align: center;
   background-color: white;
   border-radius: 10px;
 }
-/* line 9, ../sass/history.scss */
-.container .cont span {
+/* line 8, ../sass/history.scss */
+.cont span {
   color: #ff7f00;
 }
-/* line 13, ../sass/history.scss */
-.container .navbar {
+
+/* line 12, ../sass/history.scss */
+.navbar {
   left: 0px;
   top: 45px;
 }
-/* line 16, ../sass/history.scss */
-.container .navbar a {
+/* line 15, ../sass/history.scss */
+.navbar a {
   font-size: 20px;
 }
-/* line 21, ../sass/history.scss */
-.container .evolution {
+
+/* line 20, ../sass/history.scss */
+.evolution {
   padding: 10px;
   text-align: center;
   background-color: #ff7f00;
   border-radius: 10px;
 }
-/* line 28, ../sass/history.scss */
-.container .evolution h1 span {
+/* line 27, ../sass/history.scss */
+.evolution h1 span {
   color: deepskyblue;
+}
+
+/* line 34, ../sass/history.scss */
+.navigation {
+  position: fixed;
+  top: 49px;
+  left: 0px;
+  height: 100%;
+  width: 280px;
+  background-color: black;
+  -webkit-transform: translate(-100%, 0);
+  -webkit-transition: all 1s ease;
+}
+/* line 45, ../sass/history.scss */
+.navigation nav a {
+  color: white;
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+/* line 54, ../sass/history.scss */
+.navigation .show {
+  background-position: -406px 0;
+  height: 60px;
+  width: 32px;
+  height: 60px;
+  width: 32px;
+  position: absolute;
+  top: 31%;
+  left: 280px;
 }
 
 /* line 1, ../sass/quiz.scss */
@@ -369,8 +402,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 45, ../sass/tags.scss */
 .contain .printScreen {
   padding: 10px;
-  height: 300px;
-  width: 300px;
+  overflow: auto;
+  overflow: auto;
   margin: 30px auto;
   text-align: center;
   background-color: white;

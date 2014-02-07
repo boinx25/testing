@@ -65,6 +65,7 @@
 						success:function(result){
 							$('.con').html(result);
 							sideBarTransition();
+							sideBarLinkClick();
 						}
 					});
 				});
@@ -78,7 +79,8 @@
 			url: "history.html",
 			success:function(result){
 				$('.con').html(result);
-			
+				sideBarTransition();
+				sideBarLinkClick();
 		}});
 	});
 
