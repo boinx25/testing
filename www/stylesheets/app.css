@@ -352,7 +352,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: green;
 }
 
-/* line 1, ../sass/tags.scss */
+/* Navigation Bar */
+/* line 3, ../sass/tags.scss */
 .navigation {
   position: fixed;
   top: 49px;
@@ -363,7 +364,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-transform: translate(-100%, 0);
   -webkit-transition: all 1s ease;
 }
-/* line 12, ../sass/tags.scss */
+/* line 14, ../sass/tags.scss */
 .navigation nav a {
   color: white;
   font-size: 20px;
@@ -371,7 +372,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-decoration: none;
   padding: 15px 30px;
 }
-/* line 21, ../sass/tags.scss */
+/* line 23, ../sass/tags.scss */
 .navigation .show {
   background-position: -406px 0;
   height: 60px;
@@ -383,11 +384,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 280px;
 }
 
-/* line 30, ../sass/tags.scss */
+/* Contents of the page */
+/* line 36, ../sass/tags.scss */
 .contain {
   margin: 13px;
 }
-/* line 33, ../sass/tags.scss */
+/* line 39, ../sass/tags.scss */
 .contain .definition {
   padding: 10px;
   margin: 30px auto;
@@ -395,14 +397,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: white;
   border-radius: 10px;
 }
-/* line 40, ../sass/tags.scss */
+/* line 46, ../sass/tags.scss */
 .contain .definition span {
   color: #ff7f00;
 }
-/* line 45, ../sass/tags.scss */
+/* line 51, ../sass/tags.scss */
 .contain .printScreen {
   padding: 10px;
-  overflow: auto;
   overflow: auto;
   margin: 30px auto;
   text-align: center;
@@ -410,7 +411,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 10px;
   text-align: center;
 }
-/* line 57, ../sass/tags.scss */
+/* line 62, ../sass/tags.scss */
 .contain h1 span {
   color: white;
 }

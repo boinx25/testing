@@ -1,3 +1,5 @@
+/* Navigation Bar */
+
 .navigation {
 	position:fixed;
 	top:49px;
@@ -27,6 +29,10 @@
 		left:280px;
 	}
 }
+
+/* Contents of the page */
+
+
 .contain {
 	margin: 13px;
 
@@ -44,7 +50,6 @@
 
 	.printScreen {
 		padding:10px;
-		overflow: auto;
 		overflow: auto;
 		margin: $defmar2;
 		text-align:center;
