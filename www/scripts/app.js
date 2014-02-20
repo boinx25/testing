@@ -3,6 +3,9 @@
   	var menu = "close";
 	var name = " ";
 	var storedName = localStorage.getItem('userName');
+	var topScoreQuiz1 = localStorage.getItem('highScoreQuiz1');
+	var topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');
+	var topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');
 	var a;
 	var id = 1;
 	var AnswersModule1 = [];
@@ -200,7 +203,7 @@
 	{id: 3, question: "'Cougar' was the codename given to what version of HTML?", answers: [{ansText: "HTML 5", number:1}, {ansText: "HTML 4.0", number:2}, {ansText: "HTML 3", number:3}], correctAns:/*2*/'HTML 4.0'},
 	{id: 4, question: "It was the final revision of HTML and it is the current version being used today. What version of HTML is this?", answers: [{ansText: "HTML4.01", number:1}, {ansText: "HTML4.5", number:2}, {ansText: "HTML3", number:3}], correctAns:/*1*/'HTML4.01'},
 	{id: 5, question: "HTML2.0 is also called RFC ____. Give the missing four numbers:", answers: [{ansText: "1876", number:1}, {ansText: "1886", number:2}, {ansText: "1868", number:3}], correctAns:/*2*/'1886'},
-	{id: 6, question: "They are the one responsible in developing HTML5. What is the name of their group?", answers: [{ansText: "WYSIWIG", number:1}, {ansText: "WhatWGS", number:2}, {ansText: "WHATWG", number:3}], correctAns:/*3*/'WHATWG'},
+	{id: 6, question: "They are the ones responsible in developing HTML5. What is the name of their group?", answers: [{ansText: "WYSIWIG", number:1}, {ansText: "WhatWGS", number:2}, {ansText: "WHATWG", number:3}], correctAns:/*3*/'WHATWG'},
 	{id: 7, question: "It is the standard of webdesign until 1997. Also called as RFC 1866. What version is this? ", answers: [{ansText: "HTML 2.0", number:1}, {ansText: "HTML 3.0", number:2}, {ansText: "HTML 2.5", number:3}], correctAns:/*1*/ 'HTML 2.0'},
 	{id: 8, question: "What is the codename given to HTML3.2?", answers: [{ansText: "WILBUN", number:1}, {ansText: "WILBUR", number:2}, {ansText: "WILBURNT", number:3}], correctAns:/*2*/ 'WILBUR'},
 	{id: 9, question: "It was published late 1991 and was a document called 'HTML tags'. What version of HTML is this?", answers: [{ansText: "HTML 2.0", number:1}, {ansText: "HTML 2.5", number:2}, {ansText: "HTML 1.0", number:3}], correctAns:/*3*/'HTML 1.0'},
@@ -208,10 +211,10 @@
 	],
 	set3: [
 	{id: 1, question: "It is a generic container with no special meaning. Used to divide section in an HTML file. What tag is this? answer:", answers: [{ansText: "< body > Tag", number:1}, {ansText: "< div > Tag", number:2}, {ansText: "< head > Tag", number:3}], correctAns:/*2*/'< div > Tag'},
-	{id: 2, question: "There are six header tags that you can use freely in HTML, what is the largest of the six?", answers: [{ansText: "< h1 > Tag", number:1}, {ansText: "< h2 > Tag", number:2}, {ansText: "< h6 > Tag", number:3}], correctAns:/*1*/'< h1 > Tag'},
+	{id: 2, question: "There are six header tags that you can use freely in HTML, which is the largest of the six?", answers: [{ansText: "< h1 > Tag", number:1}, {ansText: "< h2 > Tag", number:2}, {ansText: "< h6 > Tag", number:3}], correctAns:/*1*/'< h1 > Tag'},
 	{id: 3, question: "It defines a portion of an HTML that should be displayed as a paragraph. What tag is this?", answers: [{ansText: "< p > Tag", number:1}, {ansText: "< para > Tag", number:2}, {ansText: "< pgraph > Tag", number:3}], correctAns:/*1*/'< p > Tag'},
 	{id: 4, question: "This tag is use to display an image. What tag is this?", answers: [{ansText: "< img >", number:1}, {ansText: "< images >", number:2}, {ansText: "< imgs >", number:3}], correctAns:/*1*/'< img >'},
-	{id: 5, question: "Represents a form, cosisting of controls, that can be submitted to a server for processing. What is this?", answers: [{ansText: "< forms > Tag", number:1}, {ansText: "< form > Tag", number:2}, {ansText: "< formsheet > Tag", number:3}], correctAns:/*2*/'< form > Tag'},
+	{id: 5, question: "Represents a form, consisting of controls, that can be submitted to a server for processing. What is this?", answers: [{ansText: "< forms > Tag", number:1}, {ansText: "< form > Tag", number:2}, {ansText: "< formsheet > Tag", number:3}], correctAns:/*2*/'< form > Tag'},
 	{id: 6, question: "There are two list that you can use in HTML, unordered and ordered, if you're going to use ordered list, what tag are you going to type?", answers: [{ansText: "< orderl > Tag", number:1}, {ansText: "< ordered > Tag", number:2}, {ansText: "< ol > Tag", number:3}], correctAns:/*3*/'< ol > Tag'},
 	{id: 7, question: "Represents a list item of a list. What tag is this?", answers: [{ansText: "< li > Tag", number:1}, {ansText: "< lists > Tag", number:2}, {ansText: "< listed > Tag", number:3}], correctAns:/*1*/'< li > Tag'},
 	{id: 8, question: "This tag represents a hyperlink. What tag is this?", answers: [{ansText: "< alink > Tag", number:1}, {ansText: "< a > Tag", number:2}, {ansText: "< link > Tag", number:3}], correctAns:/*2*/'< a > Tag'},
@@ -301,6 +304,7 @@
 						$('#uNameDone').html(name);
 						$('#correct').html(resultQuiz.correctAnswers);
 						$('#wrong').html(resultQuiz.wrongAnswers);
+						$("#topScore").html(topScoreQuiz1);
 					retakeQuiz1();
 					reviewAnswers(AnswersModule1);
 				}});
@@ -330,6 +334,7 @@
 							$("#uNameDone").html(name);
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
+							$("#topScore").html(topScoreQuiz2);
 							retakeQuiz2();
 							reviewAnswers(AnswersModule2);
 					}});
@@ -359,6 +364,7 @@
 							$("#uNameDone").html(name);
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
+							$("#topScore").html(topScoreQuiz3);
 							retakeQuiz3();
 							reviewAnswers(AnswersModule3);
 					}});
@@ -401,12 +407,27 @@
 						url: "quiz-done.html",
 						success:function(result){
 							$(".con").html(result);
-							$("#uNameDone").html(name);
-							$('#correct').html(resultQuiz.correctAnswers);
-							$('#wrong').html(resultQuiz.wrongAnswers);
-							console.log(AnswersModule1);
-							reviewAnswers(AnswersModule1);
-							retakeQuiz1();
+							if(topScoreQuiz1 == null || resultQuiz.correctAnswers > topScoreQuiz1){
+								localStorage.setItem('highScoreQuiz1',resultQuiz.correctAnswers);
+								topScoreQuiz1 = localStorage.getItem('highScoreQuiz1');	
+								$("#uNameDone").html(name);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$("#topScore").html(topScoreQuiz1);
+								console.log(AnswersModule1);
+								reviewAnswers(AnswersModule1);
+								retakeQuiz1();
+								alert('New High Score!' + topScoreQuiz1);
+							}else{
+								// topScoreQuiz1 = localStorage.getItem('highScoreQuiz1');
+								$("#uNameDone").html(name);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$("#topScore").html(topScoreQuiz1);
+								console.log(AnswersModule1);
+								reviewAnswers(AnswersModule1);
+								retakeQuiz1();
+							}
 						}});
 					}
 						
@@ -439,11 +460,26 @@
 						url: "quiz-done.html",
 						success:function(result){
 							$(".con").html(result);
-							$("#uNameDone").html(name);
-							$('#correct').html(resultQuiz.correctAnswers);
-							$('#wrong').html(resultQuiz.wrongAnswers);
-							reviewAnswers(AnswersModule2);
-							retakeQuiz2();
+							if(topScoreQuiz2 == null || resultQuiz.correctAnswers > topScoreQuiz2){
+								localStorage.setItem('highScoreQuiz2',resultQuiz.correctAnswers);
+								topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');	
+								$("#uNameDone").html(name);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$("#topScore").html(topScoreQuiz2);
+								reviewAnswers(AnswersModule2);
+								retakeQuiz2();
+								alert('New High Score!' + topScoreQuiz2);
+							}else{
+								// topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');
+								$("#uNameDone").html(name);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$("#topScore").html(topScoreQuiz2);
+								console.log(AnswersModule2);
+								reviewAnswers(AnswersModule2);
+								retakeQuiz2();
+							}
 
 						}});
 					}
@@ -472,12 +508,28 @@
 						url: "quiz-done.html",
 						success:function(result){
 							$(".con").html(result);
-							$("#uNameDone").html(name);
-							$('#correct').html(resultQuiz.correctAnswers);
-							$('#wrong').html(resultQuiz.wrongAnswers);
-							console.log(AnswersModule3);
-							reviewAnswers(AnswersModule3);
-							retakeQuiz3();
+							if(topScoreQuiz3 == null || resultQuiz.correctAnswers > topScoreQuiz3){
+								localStorage.setItem('highScoreQuiz3',resultQuiz.correctAnswers);
+								topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');	
+								$("#uNameDone").html(name);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$("#topScore").html(topScoreQuiz3);
+								console.log(AnswersModule3);
+								reviewAnswers(AnswersModule3);
+								retakeQuiz3();
+								alert('New High Score!' + topScoreQuiz3);
+							}else{
+								// topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');
+								$("#uNameDone").html(name);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$("#topScore").html(topScoreQuiz3);
+								console.log(AnswersModule3);
+								reviewAnswers(AnswersModule3);
+								retakeQuiz3();
+							}
+
 
 						}});
 					}

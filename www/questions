@@ -20,6 +20,8 @@
 
 10. They develop protocols, guidlines, and standards for webdesign. This group is currently lead by the man who created HTML. answer: W3C
 
+11.
+
 //module 2
 
 1. The physics laboratory where Tim Berners-Lee is working when he came up with the concept of HTML. answer: CERN
@@ -35,7 +37,7 @@ asnwer: HTML4.01
 
 6. HTML2.0 is also called RFC _ _ _ _. Give the missing four numbers:  answer: 1866
 
-7. They are the one responsible in developing HTML5. What is the name of their group? answer: WHATWG
+7. They are the ones responsible in developing HTML5. What is the name of their group? answer: WHATWG
 
 8. It is the standard of webdesign until 1997. Also called as RFC 1866. What version is this? answer: HTML2.0
 
@@ -47,7 +49,7 @@ asnwer: HTML4.01
 
 1. It is a generic container with no special meaning. Used to divide section in an HTML file. What tag is this? answer: <div> </div>
 
-2. There six header tags that you can use freely in HTML, what is the largest of the six? answer: <h1></h1>
+2. There six header tags that you can use freely in HTML, Which is the largest of the six? answer: <h1></h1>
 
 3. It defines a portion of an HTML that should be displayed as a paragraph. What tag is this? <p></p>
 

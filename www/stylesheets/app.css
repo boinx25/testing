@@ -3,84 +3,84 @@
   background: url('../images/icons-s38f84e90f7.png') no-repeat;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-correct {
   background-position: 0 0;
   height: 64px;
   width: 64px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-history {
   background-position: -64px 0;
   height: 32px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-home {
   background-position: -96px 0;
   height: 32px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-htmlicon {
   background-position: -128px 0;
   height: 31px;
   width: 22px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-htmltag {
   background-position: -150px 0;
   height: 32px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-login {
   background-position: -182px 0;
   height: 32px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-logout {
   background-position: -214px 0;
   height: 32px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-next {
   background-position: -246px 0;
   height: 64px;
   width: 64px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-prev {
   background-position: -310px 0;
   height: 64px;
   width: 64px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-quiz {
   background-position: -374px 0;
   height: 32px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-show {
   background-position: -406px 0;
   height: 60px;
   width: 32px;
 }
 
-/* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-wrong {
   background-position: -438px 0;
   height: 64px;
@@ -91,7 +91,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -113,45 +113,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -276,7 +276,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 280px;
 }
 
-/* line 1, ../sass/quiz.scss */
+/* line 10, ../sass/quiz.scss */
 .question {
   margin: 50px auto;
   text-align: center;
@@ -289,7 +289,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: red 2px 2px 10px;
 }
 
-/* line 11, ../sass/quiz.scss */
+/* line 20, ../sass/quiz.scss */
 #option-1 {
   padding: 20px;
   border-radius: 10px;
@@ -300,10 +300,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-box-shadow: red 2px 2px 10px;
   -moz-box-shadow: red 2px 2px 10px;
   box-shadow: red 2px 2px 10px;
-  position: relative;
 }
 
-/* line 22, ../sass/quiz.scss */
+/* line 25, ../sass/quiz.scss */
 #option-2 {
   padding: 20px;
   border-radius: 10px;
@@ -316,7 +315,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: red 2px 2px 10px;
 }
 
-/* line 33, ../sass/quiz.scss */
+/* line 30, ../sass/quiz.scss */
 #option-3 {
   padding: 20px;
   border-radius: 10px;
@@ -335,7 +334,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   vertical-align: top;
   margin-top: 13px;
 }
-/* line 10, ../sass/quiz-done.scss */
+/* line 9, ../sass/quiz-done.scss */
+.container .score-block #highScore {
+  border: 6px solid gray;
+  border-radius: 10px;
+  text-align: center;
+}
+/* line 17, ../sass/quiz-done.scss */
 .container .Answers {
   border-radius: 10px;
   background-color: white;
@@ -343,11 +348,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: none;
   font-size: 16px;
 }
-/* line 17, ../sass/quiz-done.scss */
+/* line 24, ../sass/quiz-done.scss */
 .container .Answers #mistake {
   color: red;
 }
-/* line 21, ../sass/quiz-done.scss */
+/* line 28, ../sass/quiz-done.scss */
 .container .Answers #right {
   color: green;
 }
@@ -412,7 +417,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: center;
 }
 /* line 62, ../sass/tags.scss */
-.contain h1 span {
+.contain h2 span {
   color: white;
 }
 
@@ -507,27 +512,27 @@ h4 {
   position: relative;
   font-size: 10px;
 }
-/* line 64, ../sass/app.scss */
+/* line 65, ../sass/app.scss */
 .header .nav div {
   height: 32px;
   width: 32px;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 19px;
   opacity: .25;
 }
-/* line 72, ../sass/app.scss */
+/* line 73, ../sass/app.scss */
 .header .nav #home {
   background-position: -96px 0;
   height: 32px;
   width: 32px;
 }
-/* line 77, ../sass/app.scss */
+/* line 78, ../sass/app.scss */
 .header .nav #WelcomeM {
   display: inline-block;
   position: relative;
   top: -20px;
 }
-/* line 84, ../sass/app.scss */
+/* line 85, ../sass/app.scss */
 .header .nav #LogOut {
   display: inline-block;
   position: relative;
@@ -535,7 +540,7 @@ h4 {
   left: -40px;
 }
 
-/* line 94, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .content {
   padding: 10px;
   margin: 30px auto;
@@ -543,16 +548,16 @@ h4 {
   background-color: white;
   border-radius: 10px;
 }
-/* line 101, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 .content span {
   color: #ff7f00;
 }
-/* line 105, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 .content p {
   font-size: 25px;
 }
 
-/* line 110, ../sass/app.scss */
+/* line 111, ../sass/app.scss */
 .footer {
   width: 100%;
   height: 50px;
@@ -560,7 +565,7 @@ h4 {
   color: white;
   margin-top: 30px;
 }
-/* line 117, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .footer .f-con {
   width: 450px;
   margin: auto;
@@ -568,26 +573,26 @@ h4 {
   top: 15px;
   position: relative;
 }
-/* line 124, ../sass/app.scss */
+/* line 125, ../sass/app.scss */
 .footer .f-con span {
   color: #ff7f00;
 }
-/* line 128, ../sass/app.scss */
+/* line 129, ../sass/app.scss */
 .footer .f-con a:link {
   text-decoration: none;
   color: #ff7f00;
 }
-/* line 133, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .footer .f-con a:visited {
   text-decoration: none;
   color: #ff7f00;
 }
 
-/* line 140, ../sass/app.scss */
+/* line 141, ../sass/app.scss */
 .modal-dialog {
   margin-top: 100px;
 }
-/* line 142, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 .modal-dialog .modal-content {
   text-align: center;
 }
