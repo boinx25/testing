@@ -51,7 +51,7 @@
 			url: "tags.html",
 			success:function(result){
 				$('.con').html(result);
-				$('.container').effect('slide',{'direction' : 'right','mode' : 'show','distance' : '900px'},250);
+				$('.container').fadeIn();
 				sideBarTransition();
 				sideBarLinkClick();
 				$("#htm5").click(function(){
@@ -75,7 +75,7 @@
 			url: "history.html",
 			success:function(result){
 				$('.con').html(result);
-				$('.container').effect('slide',{'direction' : 'right','mode' : 'show','distance' : '900px'},250);
+				$('.container').fadeIn();
 				sideBarTransition();
 				sideBarLinkClick();
 		}});
