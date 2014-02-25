@@ -1,36 +1,61 @@
 <div class="jumbotron">
 	<div class="container">
-		<!-- <div class="content"> -->
-			<h1>Success!<span id="uName"> </span></h1>
+		<h1>Success!<span id="uName"> </span></h1>
 
-			<p>You have successfully completed the quiz.</p>
+		<p>You have successfully completed the quiz.</p>
 
-			<h3>Here's the result:</h3>
-			<div class="score-block">
-				<i class="icons-correct"> </i> <div>You have <span id = "correct"> </span> correct answers</div>
-			</div>
+		<h3>Here's the result:</h3>
+		<div class="score-block">
+			<i class="icons-correct"> </i> <div>You have <span id = "correct"> </span> correct answers</div>
+		</div>
 
-			<div class="score-block">
-				<i class="icons-wrong"> </i> <div>You have <span id = "wrong"> </span> wrong answers</div>
-			</div>
-
+		<div class="score-block">
+			<i class="icons-wrong"> </i> <div>You have <span id = "wrong"> </span> wrong answers</div>
+		</div>
+		
 			<div class="score-block">
 				<div id="highScore">
-					<h1>Highscore:</h1><img src="images/gold_trophy.png" /><span id="topScore"> </span>
+					<h1>Highscore:</h1><img src="images/gold_trophy.png" /><span class="topScore"> </span>
 					
 				</div>
 			</div>
+		</div>
 
-			<button class="btn btn-info" id="viewAnswers">View your Answers</button>
+		<button class="btn btn-info" id="viewAnswers">View your Answers</button>
 
-			<div class="Answers">
-				<div id="answersList">
-						
-				</div>
-				
-			</div>
+		<div class="Answers">
+			<div id="answersList"> </div>
+		</div>
 
-			<div class="button"><button class="btn btn-info" id="retakeQuiz">Take Quiz Again</button></div>
-		<!-- </div> -->
+		<div class="button">
+			<button class="btn btn-info" id="retakeQuiz">Take Quiz Again</button>
+		</div>
 	</div>
 </div>
+
+
+
+<!-- Modal nung highscore ================================================================================================== -->
+
+
+<!-- <div id = "topScoreWindow" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h3>New Top Score</h3>
+			</div>
+
+			<div class="modal-body">
+				<h4>Congratulations! You have a new high score!</h4>
+				<p>Your score:</p> <span id = "topScore"></span>
+			</div> 
+	
+
+			<div class="modal-footer">
+				<button id="regBut" class = "btn btn-warning" data-dissmiss = "modal">Exit</button>
+
+			</div> 
+		</div> 
+	</div> 
+</div>  -->

@@ -7,6 +7,7 @@
 	var topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');
 	var topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');
 	var highScorer = " ";
+	var playerName = " ";
 	var a;
 	var id = 1;
 	var AnswersModule1 = [];
@@ -22,6 +23,7 @@
 			}else{
 			$('#usericon').show();
 			}
+
 	// Animation of navigation buttons
 
 	$('.navButton').mouseenter(function(){
@@ -44,10 +46,12 @@
 
 	// Ajax of Tags
 	$('#htmltags').click(function(){
+		$('.container').hide();
 		$.ajax({
 			url: "tags.html",
 			success:function(result){
 				$('.con').html(result);
+				$('.container').effect('slide',{'direction' : 'right','mode' : 'show','distance' : '900px'},250);
 				sideBarTransition();
 				sideBarLinkClick();
 				$("#htm5").click(function(){
@@ -66,10 +70,12 @@
 
 	// Ajax of History
 	$('#history').click(function(){
+		$('.container').hide();
 		$.ajax({
 			url: "history.html",
 			success:function(result){
 				$('.con').html(result);
+				$('.container').effect('slide',{'direction' : 'right','mode' : 'show','distance' : '900px'},250);
 				sideBarTransition();
 				sideBarLinkClick();
 		}});
@@ -128,7 +134,7 @@
 
 		//Logout Function
 		$('#logOut').click(function(){
-		storedName = localStorage.removeItem('userName');
+		localStorage.removeItem('userName');
 		a = 0;
 		name = null;
 		AnswersModule1 = [];
@@ -246,10 +252,10 @@
 		$('#option-2').hide();
 		$('#option-3').hide();
 
-		$('.question').fadeIn(700).html(question.question);
-		$('#option-1').fadeIn(700).html(question.answers[0].ansText);
-		$('#option-2').fadeIn(700).html(question.answers[1].ansText);
-		$('#option-3').fadeIn(700).html(question.answers[2].ansText);
+		$('.question').fadeIn(600).html(question.question);
+		$('#option-1').fadeIn(600).html(question.answers[0].ansText);
+		$('#option-2').fadeIn(600).html(question.answers[1].ansText);
+		$('#option-3').fadeIn(600).html(question.answers[2].ansText);
 	}
 
 	//Checking Answers
@@ -270,7 +276,7 @@
 
 		//Viewing Answers
 		$('#viewAnswers').click(function(){
-			$('.Answers').toggle(500);
+			$('.Answers').toggle(800);
 		});
 	}
 
@@ -287,7 +293,7 @@
 						$('.con').html(result);
 						$('#correct').html(resultQuiz.correctAnswers);
 						$('#wrong').html(resultQuiz.wrongAnswers);
-						$("#topScore").html(highScorer + ":" + topScoreQuiz1);
+						$(".topScore").html(highScorer + ":" + topScoreQuiz1);
 					retakeQuiz1();
 					reviewAnswers(AnswersModule1);
 				}});
@@ -317,7 +323,7 @@
 							$('.con').html(result);
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
-							$("#topScore").html(highScorer + ":" + topScoreQuiz2);
+							$(".topScore").html(highScorer + ":" + topScoreQuiz2);
 							retakeQuiz2();
 							reviewAnswers(AnswersModule2);
 					}});
@@ -347,7 +353,7 @@
 							$('.con').html(result);
 							$('#correct').html(resultQuiz.correctAnswers);
 							$('#wrong').html(resultQuiz.wrongAnswers);
-							$("#topScore").html(highScorer + ":" + topScoreQuiz3);
+							$(".topScore").html(highScorer + ":" + topScoreQuiz3);
 							retakeQuiz3();
 							reviewAnswers(AnswersModule3);
 					}});
@@ -385,7 +391,8 @@
 						var resultQuiz = checkAnswers(AnswersModule1,questions.set1);			
 							if(topScoreQuiz1 == null || resultQuiz.correctAnswers > topScoreQuiz1){
 								localStorage.setItem('highScoreQuiz1',resultQuiz.correctAnswers);
-								localStorage.setItem('topScorer1',storedName);
+								playerName = localStorage.getItem('userName');
+								localStorage.setItem('topScorer1',playerName);
 								topScoreQuiz1 = localStorage.getItem('highScoreQuiz1');
 								highScorer = localStorage.getItem('topScorer1');
 								$.ajax({
@@ -394,10 +401,11 @@
 										$(".con").html(result);
 										$('#correct').html(resultQuiz.correctAnswers);
 										$('#wrong').html(resultQuiz.wrongAnswers);
-										$("#topScore").html(highScorer + ":" +topScoreQuiz1);
+										$(".topScore").html(highScorer + ":" +topScoreQuiz1);
 										reviewAnswers(AnswersModule1);
 										retakeQuiz1();
-										alert('New High Score!' + " " + topScoreQuiz1);
+										// alert('New High Score!' + " " + topScoreQuiz1);
+					
 								}});
 							}						
 						else{
@@ -408,7 +416,7 @@
 										$(".con").html(result);
 										$('#correct').html(resultQuiz.correctAnswers);
 										$('#wrong').html(resultQuiz.wrongAnswers);
-										$("#topScore").html(highScorer + ":" +topScoreQuiz1);
+										$(".topScore").html(highScorer + ":" +topScoreQuiz1);
 										reviewAnswers(AnswersModule1);
 										retakeQuiz1();
 								}});
@@ -438,7 +446,8 @@
 						var resultQuiz = checkAnswers(AnswersModule2,questions.set2);
 						if(topScoreQuiz2 == null || resultQuiz.correctAnswers > topScoreQuiz2){
 							localStorage.setItem('highScoreQuiz2',resultQuiz.correctAnswers);
-							localStorage.setItem('topScorer2',storedName);
+							playerName = localStorage.getItem('userName');
+							localStorage.setItem('topScorer2',playerName);
 							topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');
 							highScorer = localStorage.getItem('topScorer2');
 							$.ajax({
@@ -447,7 +456,7 @@
 									$(".con").html(result);
 									$('#correct').html(resultQuiz.correctAnswers);
 									$('#wrong').html(resultQuiz.wrongAnswers);
-									$("#topScore").html(highScorer + ":" +topScoreQuiz2);
+									$(".topScore").html(highScorer + ":" +topScoreQuiz2);
 									reviewAnswers(AnswersModule2);
 									retakeQuiz2();
 									alert('New High Score!' + " " + topScoreQuiz2);
@@ -461,7 +470,7 @@
 										$(".con").html(result);
 										$('#correct').html(resultQuiz.correctAnswers);
 										$('#wrong').html(resultQuiz.wrongAnswers);
-										$("#topScore").html(highScorer + ":" +topScoreQuiz2);
+										$(".topScore").html(highScorer + ":" +topScoreQuiz2);
 										reviewAnswers(AnswersModule2);
 										retakeQuiz2();
 								}});
@@ -488,7 +497,8 @@
 						var resultQuiz = checkAnswers(AnswersModule3,questions.set3);
 							if(topScoreQuiz3 == null || resultQuiz.correctAnswers > topScoreQuiz3){
 							localStorage.setItem('highScoreQuiz3',resultQuiz.correctAnswers);
-							localStorage.setItem('topScorer3',storedName);
+							playerName = localStorage.getItem('userName');
+							localStorage.setItem('topScorer3',playerName);
 							topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');
 							highScorer = localStorage.getItem('topScorer3');
 							$.ajax({
@@ -497,7 +507,7 @@
 									$(".con").html(result);
 									$('#correct').html(resultQuiz.correctAnswers);
 									$('#wrong').html(resultQuiz.wrongAnswers);
-									$("#topScore").html(highScorer + ":" +topScoreQuiz3);
+									$(".topScore").html(highScorer + ":" +topScoreQuiz3);
 									reviewAnswers(AnswersModule3);
 									retakeQuiz3();
 									alert('New High Score!' + " " + topScoreQuiz3);
@@ -511,7 +521,7 @@
 										$(".con").html(result);
 										$('#correct').html(resultQuiz.correctAnswers);
 										$('#wrong').html(resultQuiz.wrongAnswers);
-										$("#topScore").html(highScorer + ":" +topScoreQuiz3);
+										$(".topScore").html(highScorer + ":" +topScoreQuiz3);
 										reviewAnswers(AnswersModule3);
 										retakeQuiz3();
 								}});

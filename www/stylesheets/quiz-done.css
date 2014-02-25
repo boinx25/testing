@@ -10,7 +10,7 @@
   border-radius: 10px;
   text-align: center;
 }
-/* line 17, ../sass/quiz-done.scss */
+/* line 16, ../sass/quiz-done.scss */
 .container .Answers {
   border-radius: 10px;
   background-color: white;
@@ -18,11 +18,16 @@
   display: none;
   font-size: 16px;
 }
-/* line 24, ../sass/quiz-done.scss */
+/* line 23, ../sass/quiz-done.scss */
 .container .Answers #mistake {
   color: red;
 }
-/* line 28, ../sass/quiz-done.scss */
+/* line 27, ../sass/quiz-done.scss */
 .container .Answers #right {
   color: green;
+}
+
+/* line 35, ../sass/quiz-done.scss */
+.jumbotron .container .btn {
+  width: 150px;
 }

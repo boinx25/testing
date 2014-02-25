@@ -1,3 +1,19 @@
+@mixin mess { 
+	padding:10px;
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+	background-color: $white;
+}
+
+@mixin btn {
+	margin-bottom: 10px;
+	width: 120px;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .jumbotron {
 	margin-top:20px;
 	
@@ -8,18 +24,10 @@
 				color: $orange;
 			}
 		.mess {
-			padding:10px;
-			width: 100%;
-			text-align: center;
-			border-radius: 10px;
-			background-color: $white;
+			@include mess;
 
 			.btn {
-				margin-bottom: 10px;
-				width: 120px;
-				display:block;
-				margin-left: auto;
-				margin-right: auto;
+				@include btn;
 			}
 		}
 	}
@@ -32,18 +40,10 @@
 			color: $orange;
 		}
 	.mess {
-		padding:10px;
-		width: 100%;
-		text-align: center;
-		border-radius: 10px;
-		background-color: $white;
+		@include mess;
 		
 		.btn {
-			margin-bottom: 10px;
-			width: 120px;
-			display:block;
-			margin-left: auto;
-			margin-right: auto;
+			@include btn;
 		}
 	}
 }
