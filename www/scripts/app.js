@@ -14,8 +14,9 @@ $(document).ready(function (){
 	var AnswersModule2 = [];
 	var AnswersModule3 = [];
 	$('#logOut').hide();
-	var HighScoreSound = document.createElement('audio');
-    HighScoreSound.setAttribute('src', 'sfx/HighScore.mp3');
+	var HighScoreSound = new Media('HighScore.mp3');
+	// var HighScoreSound = document.createElement('audio');
+    // HighScoreSound.setAttribute('src', 'HighScore.mp3');
     
 
   
@@ -399,6 +400,7 @@ $(document).ready(function (){
 				loadQuestion(questions.set1[randomNumbers[0]]);
 				
 				randomNumbers.shift();
+
 				}else{
 					var resultQuiz = checkAnswers(AnswersModule1,questions.set1);			
 					if(topScoreQuiz1 == null || resultQuiz.correctAnswers > topScoreQuiz1){
@@ -620,3 +622,7 @@ $(document).ready(function (){
 
 
 });
+
+
+
+//created by: Bryan Gamotea & Tony Bantug
