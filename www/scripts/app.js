@@ -1,4 +1,4 @@
-  $(document).ready(function (){
+$(document).ready(function (){
 
   var menu = "close";
 	var name = " ";
@@ -14,7 +14,11 @@
 	var AnswersModule2 = [];
 	var AnswersModule3 = [];
 	$('#logOut').hide();
+	var HighScoreSound = document.createElement('audio');
+    HighScoreSound.setAttribute('src', 'sfx/HighScore.mp3');
+    
 
+  
 	if(storedName != null){
 			$('#register').hide();
 			$('.modal-backdrop').hide();
@@ -46,12 +50,10 @@
 
 	// Ajax of Tags
 	$('#htmltags').click(function(){
-		$('.container').hide();
 		$.ajax({
 			url: "tags.html",
 			success:function(result){
 				$('.con').html(result);
-				$('.container').fadeIn();
 				sideBarTransition();
 				sideBarLinkClick();
 				$("#htm5").click(function(){
@@ -70,12 +72,10 @@
 
 	// Ajax of History
 	$('#history').click(function(){
-		$('.container').hide();
 		$.ajax({
 			url: "history.html",
 			success:function(result){
 				$('.con').html(result);
-				$('.container').fadeIn();
 				sideBarTransition();
 				sideBarLinkClick();
 		}});
@@ -124,13 +124,11 @@
 			$('#uName').html(name);
 			bindUser();
 			}
-
-   		 });
-	 }
+   	});
+	}
 
 	//Para magamit yung Register Button
 	bindRegBut();
-
 
 		//Logout Function
 		$('#logOut').click(function(){
@@ -280,6 +278,16 @@
 		});
 	}
 
+	//Exit Button Modal in Quiz-Done
+	function exitButtonModal(){
+		$('#exitBut').click(function(){
+
+			$('#topScoreWindow').hide();
+			$('.modal-backdrop').hide();
+
+		});
+
+	}
 
 	//Module 1 Button
 	function bindButton1(){
@@ -308,7 +316,7 @@
 					loadingQuestionsModule1();
 			 }});
 			}
-	});
+		});
 	}
 
 	//Module 2 Button
@@ -371,60 +379,66 @@
 			});
 	}
 
+	function playSound(){
+		HighScoreSound.load();
+		HighScoreSound.play();
+	}
+
 	//Module 1 Questions
 	
 	function loadingQuestionsModule1(){
 		var randomNumbers = [1,2,3,4,5,6,7,8,9];
-
 		shuffle(randomNumbers);
 		$('.options').click(function(){
-					var b= $(this).text();
-					AnswersModule1.push({id:id,Answer:b});
-					a++;
-					if(a<questions.set1.length){
-						id = questions.set1[randomNumbers[0]].id;
+			var b= $(this).text();
+			AnswersModule1.push({id:id,Answer:b});
+			a++;
+			if(a<questions.set1.length){
+				id = questions.set1[randomNumbers[0]].id;
 
-						loadQuestion(questions.set1[randomNumbers[0]]);
-						
-						randomNumbers.shift();
-					}else{
-						var resultQuiz = checkAnswers(AnswersModule1,questions.set1);			
-							if(topScoreQuiz1 == null || resultQuiz.correctAnswers > topScoreQuiz1){
-								localStorage.setItem('highScoreQuiz1',resultQuiz.correctAnswers);
-								playerName = localStorage.getItem('userName');
-								localStorage.setItem('topScorer1',playerName);
-								topScoreQuiz1 = localStorage.getItem('highScoreQuiz1');
-								highScorer = localStorage.getItem('topScorer1');
-								$.ajax({
-									url: "quiz-done.html",
-									success:function(result){
-										$(".con").html(result);
-										$('#correct').html(resultQuiz.correctAnswers);
-										$('#wrong').html(resultQuiz.wrongAnswers);
-										$(".topScore").html(highScorer + ":" +topScoreQuiz1);
-										reviewAnswers(AnswersModule1);
-										retakeQuiz1();
-										// alert('New High Score!' + " " + topScoreQuiz1);
-					
-								}});
-							}						
-						else{
+				loadQuestion(questions.set1[randomNumbers[0]]);
+				
+				randomNumbers.shift();
+				}else{
+					var resultQuiz = checkAnswers(AnswersModule1,questions.set1);			
+					if(topScoreQuiz1 == null || resultQuiz.correctAnswers > topScoreQuiz1){
+						localStorage.setItem('highScoreQuiz1',resultQuiz.correctAnswers);
+						playerName = localStorage.getItem('userName');
+						localStorage.setItem('topScorer1',playerName);
+						topScoreQuiz1 = localStorage.getItem('highScoreQuiz1');
+						highScorer = localStorage.getItem('topScorer1');
+						$.ajax({
+							url: "quiz-done.html",
+							success:function(result){
+								$(".con").html(result);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$(".topScore").html(highScorer + ":" +topScoreQuiz1);
+								$('#topScoreWindow').modal().fadeIn(1000);
+								playSound();
+								exitButtonModal();
+								reviewAnswers(AnswersModule1);
+								retakeQuiz1();
+								// alert('New High Score!' + " " + topScoreQuiz1);
+							}
+						});
+					} else {
 							$.ajax({
-									url: "quiz-done.html",
-									success:function(result){
-										highScorer = localStorage.getItem('topScorer1');
-										$(".con").html(result);
-										$('#correct').html(resultQuiz.correctAnswers);
-										$('#wrong').html(resultQuiz.wrongAnswers);
-										$(".topScore").html(highScorer + ":" +topScoreQuiz1);
-										reviewAnswers(AnswersModule1);
-										retakeQuiz1();
-								}});
-						}
+							url: "quiz-done.html",
+							success:function(result){
+								highScorer = localStorage.getItem('topScorer1');
+								$(".con").html(result);
+								$('#correct').html(resultQuiz.correctAnswers);
+								$('#wrong').html(resultQuiz.wrongAnswers);
+								$(".topScore").html(highScorer + ":" +topScoreQuiz1);
+								reviewAnswers(AnswersModule1);
+								retakeQuiz1();
+							}
+						});
 					}
-						
+				}		
 			});
-	}
+		}
 
 
 
@@ -433,49 +447,53 @@
 		var randomNumbers = [1,2,3,4,5,6,7,8,9];
 		shuffle(randomNumbers);
 		$('.options').click(function(){
-					var b= $(this).text();
-					AnswersModule2.push({id:id,Answer:b});
-					a++;
-					if(a<questions.set2.length){
-					id = questions.set2[randomNumbers[0]].id;
-					
-					loadQuestion(questions.set2[randomNumbers[0]]);
-					randomNumbers.shift();
-					
-					}else{
-						var resultQuiz = checkAnswers(AnswersModule2,questions.set2);
-						if(topScoreQuiz2 == null || resultQuiz.correctAnswers > topScoreQuiz2){
-							localStorage.setItem('highScoreQuiz2',resultQuiz.correctAnswers);
-							playerName = localStorage.getItem('userName');
-							localStorage.setItem('topScorer2',playerName);
-							topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');
+			var b= $(this).text();
+			AnswersModule2.push({id:id,Answer:b});
+			a++;
+			if(a<questions.set2.length){
+			id = questions.set2[randomNumbers[0]].id;
+			
+			loadQuestion(questions.set2[randomNumbers[0]]);
+			randomNumbers.shift();
+			
+			}else{
+				var resultQuiz = checkAnswers(AnswersModule2,questions.set2);
+				if(topScoreQuiz2 == null || resultQuiz.correctAnswers > topScoreQuiz2){
+					localStorage.setItem('highScoreQuiz2',resultQuiz.correctAnswers);
+					playerName = localStorage.getItem('userName');
+					localStorage.setItem('topScorer2',playerName);
+					topScoreQuiz2 = localStorage.getItem('highScoreQuiz2');
+					highScorer = localStorage.getItem('topScorer2');
+					$.ajax({
+						url: "quiz-done.html",
+						success:function(result){
+							$(".con").html(result);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
+							$(".topScore").html(highScorer + ":" +topScoreQuiz2);
+							$('#topScoreWindow').modal('show');
+							playSound();
+							exitButtonModal();
+							reviewAnswers(AnswersModule2);
+							retakeQuiz2();
+							// alert('New High Score!' + " " + topScoreQuiz2);
+					}});
+				}						
+				else{
+					$.ajax({
+						url: "quiz-done.html",
+						success:function(result){
 							highScorer = localStorage.getItem('topScorer2');
-							$.ajax({
-								url: "quiz-done.html",
-								success:function(result){
-									$(".con").html(result);
-									$('#correct').html(resultQuiz.correctAnswers);
-									$('#wrong').html(resultQuiz.wrongAnswers);
-									$(".topScore").html(highScorer + ":" +topScoreQuiz2);
-									reviewAnswers(AnswersModule2);
-									retakeQuiz2();
-									alert('New High Score!' + " " + topScoreQuiz2);
-							}});
-						}						
-						else{
-							$.ajax({
-									url: "quiz-done.html",
-									success:function(result){
-										highScorer = localStorage.getItem('topScorer2');
-										$(".con").html(result);
-										$('#correct').html(resultQuiz.correctAnswers);
-										$('#wrong').html(resultQuiz.wrongAnswers);
-										$(".topScore").html(highScorer + ":" +topScoreQuiz2);
-										reviewAnswers(AnswersModule2);
-										retakeQuiz2();
-								}});
+							$(".con").html(result);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
+							$(".topScore").html(highScorer + ":" +topScoreQuiz2);
+							reviewAnswers(AnswersModule2);
+							retakeQuiz2();
 						}
-					}
+					});
+				}
+			}
 		});
 	}
 
@@ -484,51 +502,55 @@
 		var randomNumbers = [1,2,3,4,5,6,7,8,9];
 		shuffle(randomNumbers);
 		$('.options').click(function(){
-					var b=$(this).text();
-					AnswersModule3.push({id:id,Answer:b});
-					a++;
-					if(a<questions.set3.length){
-						id = questions.set3[randomNumbers[0]].id;
-					
-						loadQuestion(questions.set3[randomNumbers[0]]);
-						
-						randomNumbers.shift();
-					}else{
-						var resultQuiz = checkAnswers(AnswersModule3,questions.set3);
-							if(topScoreQuiz3 == null || resultQuiz.correctAnswers > topScoreQuiz3){
-							localStorage.setItem('highScoreQuiz3',resultQuiz.correctAnswers);
-							playerName = localStorage.getItem('userName');
-							localStorage.setItem('topScorer3',playerName);
-							topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');
+			var b=$(this).text();
+			AnswersModule3.push({id:id,Answer:b});
+			a++;
+			if(a<questions.set3.length){
+				id = questions.set3[randomNumbers[0]].id;
+			
+				loadQuestion(questions.set3[randomNumbers[0]]);
+				
+				randomNumbers.shift();
+			}else{
+				var resultQuiz = checkAnswers(AnswersModule3,questions.set3);
+					if(topScoreQuiz3 == null || resultQuiz.correctAnswers > topScoreQuiz3){
+					localStorage.setItem('highScoreQuiz3',resultQuiz.correctAnswers);
+					playerName = localStorage.getItem('userName');
+					localStorage.setItem('topScorer3',playerName);
+					topScoreQuiz3 = localStorage.getItem('highScoreQuiz3');
+					highScorer = localStorage.getItem('topScorer3');
+					$.ajax({
+						url: "quiz-done.html",
+						success:function(result){
+							$(".con").html(result);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
+							$(".topScore").html(highScorer + ":" +topScoreQuiz3);
+							$('#topScoreWindow').modal('show');
+							playSound();
+							exitButtonModal();
+							reviewAnswers(AnswersModule3);
+							retakeQuiz3();
+							// alert('New High Score!' + " " + topScoreQuiz3);
+					}});
+				}						
+				else{
+					$.ajax({
+						url: "quiz-done.html",
+						success:function(result){
 							highScorer = localStorage.getItem('topScorer3');
-							$.ajax({
-								url: "quiz-done.html",
-								success:function(result){
-									$(".con").html(result);
-									$('#correct').html(resultQuiz.correctAnswers);
-									$('#wrong').html(resultQuiz.wrongAnswers);
-									$(".topScore").html(highScorer + ":" +topScoreQuiz3);
-									reviewAnswers(AnswersModule3);
-									retakeQuiz3();
-									alert('New High Score!' + " " + topScoreQuiz3);
-							}});
-						}						
-						else{
-							$.ajax({
-									url: "quiz-done.html",
-									success:function(result){
-										highScorer = localStorage.getItem('topScorer3');
-										$(".con").html(result);
-										$('#correct').html(resultQuiz.correctAnswers);
-										$('#wrong').html(resultQuiz.wrongAnswers);
-										$(".topScore").html(highScorer + ":" +topScoreQuiz3);
-										reviewAnswers(AnswersModule3);
-										retakeQuiz3();
-								}});
+							$(".con").html(result);
+							$('#correct').html(resultQuiz.correctAnswers);
+							$('#wrong').html(resultQuiz.wrongAnswers);
+							$(".topScore").html(highScorer + ":" +topScoreQuiz3);
+							reviewAnswers(AnswersModule3);
+							retakeQuiz3();
 						}
-					}
-				});
+					});
+				}
 			}
+		});
+	}
 
 	function retakeQuiz1(){
 		$('#retakeQuiz').click(function(){
@@ -577,24 +599,24 @@
 
 	// sidebar
 
-  	function sideBarTransition() {
+	function sideBarTransition() {
 
-  		$('.show').click(function(){
-  			if (menu == "close"){
-  				$('.navigation').css('-webkit-transform','translate(0, 0)');
-  				menu = "open"
-  			} else {
-  				$('.navigation').css('-webkit-transform','translate(-100%, 0)');
-  				menu = "close"
-  			}
-			});
-  	}
+		$('.show').click(function(){
+			if (menu == "close"){
+				$('.navigation').css('-webkit-transform','translate(0, 0)');
+				menu = "open"
+			} else {
+				$('.navigation').css('-webkit-transform','translate(-100%, 0)');
+				menu = "close"
+			}
+		});
+	}
 
-  	function sideBarLinkClick() {
-  		$('nav a').click(function(){
-  			$('.navigation').css('-webkit-transform','translate(-100%, 0)');
-  		});
-  	}
+	function sideBarLinkClick() {
+		$('nav a').click(function(){
+			$('.navigation').css('-webkit-transform','translate(-100%, 0)');
+		});
+	}
 
 
 });

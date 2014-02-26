@@ -1,16 +1,20 @@
 /* line 3, ../sass/quiz-done.scss */
+.container button {
+  width: 150px;
+}
+/* line 8, ../sass/quiz-done.scss */
 .container .score-block div {
   display: inline-block;
   vertical-align: top;
   margin-top: 13px;
 }
-/* line 9, ../sass/quiz-done.scss */
+/* line 14, ../sass/quiz-done.scss */
 .container .score-block #highScore {
   border: 6px solid gray;
   border-radius: 10px;
   text-align: center;
 }
-/* line 16, ../sass/quiz-done.scss */
+/* line 21, ../sass/quiz-done.scss */
 .container .Answers {
   border-radius: 10px;
   background-color: white;
@@ -18,16 +22,16 @@
   display: none;
   font-size: 16px;
 }
-/* line 23, ../sass/quiz-done.scss */
+/* line 28, ../sass/quiz-done.scss */
 .container .Answers #mistake {
   color: red;
 }
-/* line 27, ../sass/quiz-done.scss */
+/* line 32, ../sass/quiz-done.scss */
 .container .Answers #right {
   color: green;
 }
 
-/* line 35, ../sass/quiz-done.scss */
+/* line 40, ../sass/quiz-done.scss */
 .jumbotron .container .btn {
   width: 150px;
 }

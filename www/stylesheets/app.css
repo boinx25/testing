@@ -40,7 +40,7 @@
 
 /* line 60, ../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-login {
-  background-position: -184px 0;
+  background-position: -182px 0;
   height: 32px;
   width: 32px;
 }
@@ -329,18 +329,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 3, ../sass/quiz-done.scss */
+.container button {
+  width: 150px;
+}
+/* line 8, ../sass/quiz-done.scss */
 .container .score-block div {
   display: inline-block;
   vertical-align: top;
   margin-top: 13px;
 }
-/* line 9, ../sass/quiz-done.scss */
+/* line 14, ../sass/quiz-done.scss */
 .container .score-block #highScore {
   border: 6px solid gray;
   border-radius: 10px;
   text-align: center;
 }
-/* line 17, ../sass/quiz-done.scss */
+/* line 21, ../sass/quiz-done.scss */
 .container .Answers {
   border-radius: 10px;
   background-color: white;
@@ -348,16 +352,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: none;
   font-size: 16px;
 }
-/* line 24, ../sass/quiz-done.scss */
+/* line 28, ../sass/quiz-done.scss */
 .container .Answers #mistake {
   color: red;
 }
-/* line 28, ../sass/quiz-done.scss */
+/* line 32, ../sass/quiz-done.scss */
 .container .Answers #right {
   color: green;
 }
 
-/* line 36, ../sass/quiz-done.scss */
+/* line 40, ../sass/quiz-done.scss */
 .jumbotron .container .btn {
   width: 150px;
 }
