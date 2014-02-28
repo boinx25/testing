@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        playAudio("/android_asset/HighScore.mp3");
+        playAudio("/android_asset/www/HighScore.mp3");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
