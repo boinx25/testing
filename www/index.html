@@ -7,20 +7,13 @@
 		<link rel="stylesheet" href="stylesheets/jquery-ui-1.10.4.custom.css">
 		<link rel="stylesheet" href="stylesheets/app.css">
 		<link rel="shortcut icon" type="image/x-icon" href="images/logo_title.jpg">
-		<script type="text/javascript" src="scripts/jquery-mobile.js"></script>
-		<script type="text/javascript" src="scripts/jquery.js"></script>
-		<script type="text/javascript" src="scripts/bootstrap.js"></script>
-		<script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.js"></script>
-		<script type="text/javascript" src="scripts/app.js"></script>
-		<script type="text/javascript" src="scripts/quiz.js"></script>
-		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	</head>
 	<body>
 		<div class="header navbar navbar-inverse navbar-fixed-top">
 			<div class = "col-xs-12">	
 				<div class="nav">
-					<div id="home" class="navButton icons-home"> </div>
+					<div id="home" class="navButton icons-home"></div>
 					<div id="htmltags" class="navButton icons-htmltag"> </div>
 					<div id="history" class="navButton icons-history"> </div>
 					<div id="quiz" class="navButton icons-quiz"> </div>
@@ -31,15 +24,15 @@
 		</div> <!-- end of header div -->
 
 		<div class="container">
-		
-			<div class="con" data-transition="pop">
-				
+
+			<div class="con">
+
 				<div class="logo"><img id = "logo" src="images/htmllogo.png" alt=""></div>	
-
+				
 				<div class="content">
-					<p>Hello! Welcome to HTML5 Tutorials! Please use the navigation pane or the <span>ICONS</span> above to navigate through pages!</p>
+					<p>Hello! Welcome to HTML5 Tutorials! Please use the navigation pane or the <span>ICONS</span> above to navigate through pages! Here are the usage of the icons above: <button href = "#instructions" class = "instButton btn btn-danger" data-toggle = "modal">Instructions</button>
+				
 				</div> <!-- end of content div -->
-
 				<div class="clearfix"></div>
 			</div> <!-- end of con div -->
 
@@ -67,5 +60,39 @@
 			</div> <!-- end of modal-dialog div -->
 		</div> <!-- end of register div -->
 		
+
+	<div id = "instructions" class="modal fade" aria-hidden = "true">
+		<div class="modal-dialog">
+			<div class="modal-content inst">
+
+				<div class="modal-header">
+					<h3>Navigation bar legends</h3>
+				</div>
+
+				<div class="modal-body">
+					<div><img src="images/icons/home.png" alt=""><span>Home Button</span></div>
+					<div><img src="images/icons/htmltag.png" alt=""><span>Button linked to HTML tags page</span></div>
+					<div><img src="images/icons/history.png" alt=""><span>Button linked to History page</span></div>
+					<div><img src="images/icons/quiz.png" alt=""><span>Button linked to Quiz page</span></div>
+					<div><img src="images/icons/login.png" alt=""><span>Login button</span></div>
+					<div><img src="images/icons/logout.png" alt=""><span>Logout button</span></div>
+				</div>
+
+				<div class="modal-footer">
+					<button id="close" class = "btn btn-primary" data-dismiss = "modal">Go!</button>
+				</div> <!-- end of modal-footer div -->
+
+			</div> <!-- end of modal-content div -->
+		</div> <!-- end of modal-dialog div -->
+	</div> <!-- end of register div -->
+	
+		<script type="text/javascript" src="scripts/jquery-mobile.js"></script>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/quiz.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	</body>
 </html>
