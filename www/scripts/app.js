@@ -16,7 +16,7 @@ $(document).ready(function (){
 	$('#logOut').hide();
 	var HighScoreSound = new Media('HighScore.mp3');
 	// var HighScoreSound = document.createElement('audio');
-    // HighScoreSound.setAttribute('src', 'HighScore.mp3');
+ //    HighScoreSound.setAttribute('src', 'HighScore.mp3');
     
 
   
