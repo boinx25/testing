@@ -141,7 +141,7 @@ $(document).ready(function (){
 	var AnswersModule3 = [];
 	$('#logOut').hide();
 
-	var HighScoreSound = new Media('HighScore.mp3'); 
+	
 	// var HighScoreSound = document.createElement('audio');
  //    HighScoreSound.setAttribute('src', 'HighScore.mp3');
     
