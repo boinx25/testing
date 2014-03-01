@@ -192,9 +192,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 40, ../sass/quiz-intro.scss */
 .container span {
   color: #ff7f00;
-  font-size: 45px;
 }
-/* line 44, ../sass/quiz-intro.scss */
+/* line 43, ../sass/quiz-intro.scss */
 .container .mess {
   padding: 10px;
   width: 100%;
@@ -202,7 +201,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 10px;
   background-color: white;
 }
-/* line 47, ../sass/quiz-intro.scss */
+/* line 46, ../sass/quiz-intro.scss */
 .container .mess .btn {
   margin-bottom: 10px;
   width: 120px;
@@ -571,5 +570,9 @@ h4 {
   text-align: center;
   background-color: #00bfff;
   color: black;
-  font-size: 17px;
+}
+/* line 109, ../sass/app.scss */
+.modal-dialog .modal-content .modal-body .topScore {
+  color: #ff7f00;
+  font-size: 35px;
 }

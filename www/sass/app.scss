@@ -104,8 +104,15 @@ h4 { font-size: 20px; }
 		text-align: center;
 		background-color: #00bfff;
 		color: black;
-		font-size: 17px;
+	
+	.modal-body{
+			.topScore{
+			color:$orange;
+			font-size: 35px;
+		}
 	}
+	}
+
 }
 
 
