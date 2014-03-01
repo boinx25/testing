@@ -119,6 +119,7 @@ $(document).ready(function (){
 			$('#register').hide();
 			$('.modal-backdrop').hide();
 			$('#usericon').hide();
+			$('#uname').blur();
 			$('#logOut').fadeIn(1000);
 			$('#uName').html(name);
 			bindUser();
